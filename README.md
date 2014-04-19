@@ -99,10 +99,7 @@ group:core
 ```
 
 ## code ( java )
-```java
-### Setup
 ```Java
-
 TemplateService svc = new TemplateService();
 TemplateView tview = svc.executeTemplate(" text5.accent.strong 'hello world!' ");
 
