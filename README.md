@@ -67,52 +67,8 @@ list down height=200
 
 ```
 
-
-### tag examples
-| tag part | example | desc
-| :------------ | :------------ | :------------ |
-| name | h1:title | heading text with name='title' | 
-| style | h1.accent | heading with css style='accent' | 
-| name + style | h1:title.accent | heading with name and style set | 
-| name + multiple styles | h1:title.accent.strong | set multiple styles  | 
-| default attribute value | h1:title.accent 'heading 1' | text='heading 1' first attribute key optional | 
-| explicit attribute | h1:title.accent text='heading 1' | heading with text='heading 1'  | 
-| explicit attributes | h1:title.accent text='heading 1' alignh='center' | multiple attributes  | 
-| attribute enclosure | list( width=100 height=200 ) { } | multiple atts enclosed by ( ) - optional  |
-| children | list across { text1 'test1' } | use braces { } to designate block/children.    | 
-
- 
-### tags supported
-| tag | purpose  | default attribute | example |
-| :------------ | :------------ | :------------ | :------------ |
-| h1 - h6 | heading text | text | h1 'heading 1' |
-| text1 - text6 | normal text | text | text5 'this is text 6' |
-| list | container | mode=( across, down ) | list across { ... } |
-| img  | image | src | img 'weather_sunny.png' |
-| circle | cirlce shape | width | circle 30 |
-| box| box to hold only 1 element | width |  |
-
-
-### tag attributes
-each tag can have a collection of attributes in the form of key=value pairs ( like html ).
-however, each attribute value does NOT need to be enclosed in quotes "" such as for numbers and colors and predefined values such as left, center, right.
-"list mode=across width=200 { .. }"
-
-below are the most common attributes supported ( which are the same as most android/windows phone attributes )
-
-| name | type | used for | default value | examples |
-| :------------ | :------------ | :------------ | :------------ |:------------ |
-| color| string | **h1** to **h6** and **text1** to **text6** | default text color | color='Red' or color='#242424' |
-| background-color | string | **list**, **box** |  default background color | color='Red' or color='#242424' |
-| mode | across or down | **list** | down | list mode=across or list across |
-| width | number | all | match_parent | width=200 |
-| height| number | all | wrap_content | height=200 | 
-| margin | string | all | 0| margin='10,0,10,5' | 
-| margin-left | number | all | 0 | margin-left=200 |
-| margin-top | number | all | 0 |  margin-top=200 |
-| margin-left | number | all | 0 | margin-left=200 |
-| margin-bottom | number | all | 0 |  margin-bottom=200 |
-| alignh | left or center or right  |  all | left | alignh=center |
+###[See template wiki page for more info !](https://github.com/kishorereddy/slate-templates/wiki/templates)
+###[See tags wiki page for more info !](https://github.com/kishorereddy/slate-templates/wiki/tags)
 
 
 # styles
