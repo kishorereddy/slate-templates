@@ -44,6 +44,18 @@ __Examples:__
 - list:Today.board ( list id=Today style=board )
  
 ### tags supported
+tags work very similar to html tags like h1, img, etc with a few differences
+
+- 1. most tags have default attributes which allow you to omit the name of the attribute and just write the value
+| tag | purpose | default attribute  |
+| :---------------- | :---------------- |:-----------------| ---------------|:----------------|
+| h1 .. h6 | heading text | text |
+| text1 .. text6 | normal text | text |
+| list | container | mode |
+| img  | image | src |
+| text1 .. text6 | normal text | text |
+
+
 - list 
 - h1, h2, h3, h4, h5, h6  ( like html )
 - text1, text2, text3, text4, text5, text6
