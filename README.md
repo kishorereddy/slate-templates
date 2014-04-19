@@ -6,6 +6,9 @@ it allows you to write UI's in the form of templates that convert to native mobi
 
 it supports styles,themes in a miniature form of css, templates in a concise block form with attributes ( such as list att1=value { ... } )
 
+# documentation
+##[See wiki for much more documentation!](https://github.com/kishorereddy/slate-templates/wiki)
+
 # templates
 ### sample template
 ```javascript
