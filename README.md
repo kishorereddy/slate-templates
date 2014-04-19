@@ -34,46 +34,77 @@ it supports styles,themes in a miniature form of css, templates in a concise blo
 ![output here](/media/template-sampleui_1.jpg?raw=true)
 https://github.com/kishorereddy/slate-templates/raw/master/media/template-sampleui_1.jpg
 
-### tag formats
-- 1. tags start with the name "list"
-- 2. followed by optional id prefixed by ":" such as "list:Today"
-- 3. followed by optional style prefixed by "." such as "list:Today.board"
-- 4. followed by multiple attributes ( key=value )
-- 5. followed by a block { } which indicate the tag has children
 
-__Examples:__
-- list:Today  ( list id=Today )
-- list:Today.board ( list id=Today style=board )
+## goals
+1. minimal typing / size ( 33 % less than xml !!! )
+2. simplicity and conciseness to element structure
+3. familiarity ( similar syntax to html and css )
+
+## syntax
+the fundamental structure of the tag form is :
+
+| tag | :name | .style | .style2 | default attribute value | remaining attributes | body |
+| :------------ | :---------- | :---------- |:---------- |:---------- |:---------- |:---------- |
+| list| :event| .accent | .contrast| down | height=200 | {  }  |
+| text5 | :title | .accent | .strong | 'this is some text' | color='Red' |  |
+
+```html
+list down height=200
+{   
+   img 'icon_event' width=30
+   text5:title.accent 'Dinner in the city'
+   text5.time      '@7 pm'
+   text6.location  'City winery'
+}
+
+```
+
+
+## examples
+| tag part | example | desc
+| :------------ | :------------ | :------------ |
+| name | h1:title | heading text with name='title' | 
+| style | h1.accent | heading with css style='accent' | 
+| name + style | h1:title.accent | heading with name and style set | 
+| name + multiple styles | h1:title.accent.strong | set multiple styles  | 
+| default attribute value | h1:title.accent 'heading 1' | text='heading 1' first attribute key optional | 
+| explicit attribute | h1:title.accent text='heading 1' | heading with text='heading 1'  | 
+| explicit attributes | h1:title.accent text='heading 1' alignh='center' | multiple attributes  | 
+| attribute enclosure | list( width=100 height=200 ) { } | multiple atts enclosed by ( ) - optional  |
+| children | list across { text1 'test1' } | use braces { } to designate block/children.    | 
+
  
-### tags supported
-tags work very similar to html tags like h1, img, etc with a few differences
-
-- 1. most tags have default attributes which allow you to omit the name of the attribute and just write the value
-| tag | purpose | default attribute  |
-| :---------------- | :---------------- |:-----------------| ---------------|:----------------|
-| h1 .. h6 | heading text | text |
-| text1 .. text6 | normal text | text |
-| list | container | mode |
-| img  | image | src |
-| text1 .. text6 | normal text | text |
+## supported tags
+| tag | purpose  | default attribute | example |
+| :------------ | :------------ | :------------ | :------------ |
+| h1 - h6 | heading text | text | h1 'heading 1' |
+| text1 - text6 | normal text | text | text5 'this is text 6' |
+| list | container | mode=( across, down ) | list across { ... } |
+| img  | image | src | img 'weather_sunny.png' |
+| circle | cirlce shape | width | circle 30 |
+| box| box to hold only 1 element | width |  |
 
 
-- list 
-- h1, h2, h3, h4, h5, h6  ( like html )
-- text1, text2, text3, text4, text5, text6
-- img
-- circle
-- box
-
-### attributes
+## attributes
 each tag can have a collection of attributes in the form of key=value pairs ( like html ).
-however, each attribute value does NOT need to be enclosed in quotes "" if there is NO space
-- text2 text=Tuesday font-size=30
+however, each attribute value does NOT need to be enclosed in quotes "" such as for numbers and colors and predefined values such as left, center, right.
+"list mode=across width=200 { .. }"
 
-### notes
-- list tags serve as a container for other tags
-- list tags can be set to display items either down or across
-- each tag has a default attribute
+below are the most common attributes supported ( which are the same as most android/windows phone attributes )
+
+| name | type | used for | default value | examples |
+| :------------ | :------------ | :------------ | :------------ |:------------ |
+| color| string | **h1** to **h6** and **text1** to **text6** | default text color | color='Red' or color='#242424' |
+| background-color | string | **list**, **box** |  default background color | color='Red' or color='#242424' |
+| mode | across or down | **list** | down | list mode=across or list across |
+| width | number | all | match_parent | width=200 |
+| height| number | all | wrap_content | height=200 | 
+| margin | string | all | 0| margin='10,0,10,5' | 
+| margin-left | number | all | 0 | margin-left=200 |
+| margin-top | number | all | 0 |  margin-top=200 |
+| margin-left | number | all | 0 | margin-left=200 |
+| margin-bottom | number | all | 0 |  margin-bottom=200 |
+| alignh | left or center or right  |  all | left | alignh=center |
 
 # styles
 Styles in slates are setup very similar to CSS but with some dynamic functionality and also some limitations ( to maximize performance ).
