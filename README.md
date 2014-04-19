@@ -9,28 +9,28 @@ it supports styles,themes in a miniature form of css, templates in a concise blo
 # templates
 ### sample template
 ```javascript
-template.weeksummary
+// Loop through calendar and show all data for that day.
+// This includes day/date/weather/first event time
+			
+@each ( day in @calendar.days limit=4 )
 {
-  list.area-weather
-  {
-      list across
-      {           
-          img.weather-icon-big @weather.currentIconImage
-          list.area-temp
-          {
-              text2 @weather.currentTemp
-              list across
-              {
-                  text4.weather-tempmax @weather.todayHighTemp
-                  text4.weather-tempsep '/'
-                  text4.weather-tempmin @weather.todayLowTemp
-              }
-          }
-      }
-      text6.weather-text @weather.currentConditions
-  }
+	list.day
+	{
+		h6.dayName  @day.dayName			  
+		text6.cell	@day.dayDate
+		img.iconwt	@day.weatherImage
+		text6.cell	@day.tempHigh
+		text6.cell	@day.tempLow
+		text6.cell	@day.firstEventTimeAsText
+		text6.cell	@day.totalEventsText
+		text6.cell	@day.totalBDaysAsText
+	}
 }
 ```
+
+### output 
+https://github.com/kishorereddy/slate-templates/raw/master/media/template-sampleui_1.jpg
+
 ### tag formats
 - 1. tags start with the name "list"
 - 2. followed by optional id prefixed by ":" such as "list:Today"
