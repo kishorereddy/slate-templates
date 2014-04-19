@@ -1,8 +1,8 @@
 SLATE - a templating engine for mobile
 =====
-slate is a light-weight cross-platform templating language for mobile devices.
+slate is a light-weight cross-platform( android - windows phone ) templating language for mobile devices.
 
-it allows you to write small scripts in the form of templates that convert to native mobile UI controls.
+it allows you to write UI's in the form of templates that convert to native mobile UI controls.
 
 it supports styles,themes in a miniature form of css, templates in a concise block form with attributes ( such as list att1=value { ... } )
 
