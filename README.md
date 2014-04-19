@@ -6,7 +6,7 @@ it allows you to write UI's in the form of templates that convert to native mobi
 
 it supports styles,themes in a miniature form of css, templates in a concise block form with attributes ( such as list att1=value { ... } )
 
-# Templates
+# templates
 ### sample template
 ```javascript
 template.weeksummary
@@ -60,7 +60,7 @@ however, each attribute value does NOT need to be enclosed in quotes "" if there
 - list tags can be set to display items either down or across
 - each tag has a default attribute
 
-# Styles
+# styles
 Styles in slates are setup very similar to CSS but with some dynamic functionality and also some limitations ( to maximize performance ).
 
 ```css
@@ -98,10 +98,15 @@ group:core
 }
 ```
 
-## code ( java )
+# code ( android / java )
 ```Java
+// Create instance of the templating service with default values and styles
 TemplateService svc = new TemplateService();
+
+// Execute a simple hello world template
 TemplateView tview = svc.executeTemplate(" text5.accent.strong 'hello world!' ");
 
+// The engine returns a template view where the root view represents the 1st UI element
+// In this example we are adding the generated UI into a container in an android page/activity
 page.addView(R.id.pnlContainer, tview.RootView);
 ```
