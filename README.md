@@ -1,15 +1,27 @@
 SLATE - a templating engine for mobile
 =====
-slate is a light-weight cross-platform( android - windows phone ) templating language for mobile devices.
-
-it allows you to write UI's in the form of templates that convert to native mobile UI controls.
-
-it supports styles,themes in a miniature form of css, templates in a concise block form with attributes ( such as list att1=value { ... } )
+slate is a light-weight NATIVE cross-platform( android - windows phone ) templating language for mobile devices.
 
 ###[See wiki for more docs!](https://github.com/kishorereddy/slate-templates/wiki)
 
+
+# goals
+A fully **NATIVE** mobile templating engine for android and windows phone.
+Following are top level goals
+
+| #  | goal | approach |
+|:-- |:-- |:-- |
+|1. |**NATIVE** | fully native templating engine converts text to native mobile controls |
+|2. |**multi-platform** | templating engine converts text to native adnroid / windows phone controls |
+|3. |**minimal typing** | size is **33 %** less than xml !!! |
+|4. |**simplicity** | ease to use elements and attributes |
+|5. |**familiarity** | similar syntax to html and css |
+|6. |**flexible styling** | tag elements with styles like in CSS |
+|7. |**data-binding** | supply data to your templates ( mostly logic-less ) |
+
+
 # templates
-### sample template
+### sample 
 ```javascript
 // Loop through calendar and show all data for that day.
 // This includes day/date/weather/first event time
@@ -35,12 +47,8 @@ it supports styles,themes in a miniature form of css, templates in a concise blo
 https://github.com/kishorereddy/slate-templates/raw/master/media/template-sampleui_1.jpg
 
 
-## goals
-1. minimal typing / size ( 33 % less than xml !!! )
-2. simplicity and conciseness to element structure
-3. familiarity ( similar syntax to html and css )
 
-## syntax
+### tag syntax
 the fundamental structure of the tag form is :
 
 | tag | :name | .style | .style2 | default attribute value | remaining attributes | body |
@@ -60,7 +68,7 @@ list down height=200
 ```
 
 
-## examples
+### tag examples
 | tag part | example | desc
 | :------------ | :------------ | :------------ |
 | name | h1:title | heading text with name='title' | 
@@ -74,7 +82,7 @@ list down height=200
 | children | list across { text1 'test1' } | use braces { } to designate block/children.    | 
 
  
-## supported tags
+### tags supported
 | tag | purpose  | default attribute | example |
 | :------------ | :------------ | :------------ | :------------ |
 | h1 - h6 | heading text | text | h1 'heading 1' |
@@ -85,7 +93,7 @@ list down height=200
 | box| box to hold only 1 element | width |  |
 
 
-## attributes
+### tag attributes
 each tag can have a collection of attributes in the form of key=value pairs ( like html ).
 however, each attribute value does NOT need to be enclosed in quotes "" such as for numbers and colors and predefined values such as left, center, right.
 "list mode=across width=200 { .. }"
@@ -105,6 +113,7 @@ below are the most common attributes supported ( which are the same as most andr
 | margin-left | number | all | 0 | margin-left=200 |
 | margin-bottom | number | all | 0 |  margin-bottom=200 |
 | alignh | left or center or right  |  all | left | alignh=center |
+
 
 # styles
 Styles in slates are setup very similar to CSS but with some dynamic functionality and also some limitations ( to maximize performance ).
