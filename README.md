@@ -7,7 +7,7 @@ it allows you to write UI's in the form of templates that convert to native mobi
 it supports styles,themes in a miniature form of css, templates in a concise block form with attributes ( such as list att1=value { ... } )
 
 # Templates
-### examples
+### sample template
 ```javascript
 template.weeksummary
 {
@@ -98,3 +98,13 @@ group:core
 }
 ```
 
+## code ( java )
+```java
+### Setup
+```Java
+
+TemplateService svc = new TemplateService();
+TemplateView tview = svc.executeTemplate(" text5.accent.strong 'hello world!' ");
+
+page.addView(R.id.pnlContainer, tview.RootView);
+```
