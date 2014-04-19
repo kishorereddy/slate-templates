@@ -29,6 +29,7 @@ it supports styles,themes in a miniature form of css, templates in a concise blo
 ```
 
 ### output 
+![output here](/media/template-sampleui_1.jpg?raw=true)
 https://github.com/kishorereddy/slate-templates/raw/master/media/template-sampleui_1.jpg
 
 ### tag formats
