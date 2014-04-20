@@ -111,6 +111,8 @@ group:core
 
 # code ( android / java )
 ```Java
+import com.slate.templates.templating.*;
+
 // Create instance of the templating service with default values and styles
 TemplateService svc = new TemplateService();
 
