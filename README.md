@@ -6,7 +6,7 @@ slate is a light-weight NATIVE cross-platform( android - windows phone ) templat
 
 
 # goals
-A fully **NATIVE** mobile templating engine for android and windows phone.
+A fully **NATIVE** mobile templating engine for windows phone and android ( PROOF-OF-CONCEPT )
 Following are top level goals
 
 | #  | goal | approach |
