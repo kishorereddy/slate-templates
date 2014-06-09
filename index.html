@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+	<link rel="stylesheet" type="text/css" href="lib/external/syntaxhighlighter/css/sh_darkness.css" />
+	
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -19,7 +21,7 @@
 
         <header>
           <h1>Slate-templates</h1>
-          <h2>Android UI scripting</h2>
+          <h2>Native Android / Windows UI templating</h2>
         </header>
 
         <section id="downloads" class="clearfix">
@@ -30,7 +32,181 @@
 
         <hr>
 
+		<section  class="clearfix">
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">What are slate templates ?</span></a></h1>
+			<p>Slate templates allow you to easily create <strong>native</strong> mobile user interfaces using a templating system. Think of it a hybrid between markdown + templating for mobile. </p>
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Goals</span></a></h1>
+			<p>Slate templates allow you to easily create <strong>native</strong> mobile user interfaces using a templating system. Think of it a hybrid between markdown + templating for mobile. </p>
+			<ol>
+				<li>33% less typing</li>
+				<li>cross-platform ( android + windows )</li>
+				<li>dynamic ( store UI's on your server / cloud )</li>
+				<li>use relative widths ( via percent % )</li>
+				<li>enable mock data ( for rapid prototyping )</li>
+				<li>fully native controls</li>
+			</ol>
+			
+			<br/>
+			
+			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">1. 33 % less than xml</span></a></h2>
+			<p>Slate templates are NOT xml based. The syntax is similar to code. The following syntax significantly reduces the size</p>
+			<ul>
+				<li>Use braces { } instead on end tags</li>
+				<li>Text, Images, Lists have support a default attribute so you can leave it out altogether</li>
+				<li>Some attribute values which are numeric don't required being enclosed in quotes</li>
+			</ul>
+<div>
+<pre class="sh_javascript" >
+template.core
+{
+   // Loop through calendar and show all data for that day.
+   // This includes day/date/weather/first event time
+   @each ( day in @calendar.days limit=4 )
+   {
+      list.col3 across
+      {
+         h6.dayName  @day.dayName
+         text6.cell  @day.dayDate
+         img.iconwt  @day.weatherImage
+         text6.cell  @day.tempHigh
+         text6.cell  @day.tempLow
+         text6.cell  @day.firstEventTimeAsText
+         text6.cell  @day.totalEventsText
+         text6.cell  @day.totalBDaysAsText
+      }
+   }
+}
+</pre>
+</div>
+			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">2. cross-platform</span></a></h2>
+			<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+			<section class="clearfix" >
+				<table>
+				<tr><td><div ><img class="iconMid" src="images/ext/android.png"  /></div></td><td><div ><img class="iconMid" src="images/ext/windows.png"  /></div></td></tr>	
+				<tr><td>android JAVA library</td><td>C# library for windows/phone</td></tr>	
+				</table>
+			</section>
+			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">3. dynamic</span></a></h2>
+			<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<div>
+<pre class="sh_javascript" >
+
+// Yout android or windows xml or xaml layouts have
+// to be in a file packaged in the app.
+// So you typically load the layout like so:
+View viewFromFile = inflate(R.layout.eventInfo, null);
+
+// With slate, you can supply just a string representing
+// the layout. This enables you to get layout/string from 
+// anywhere. Don't worry... the templates are safe / secure 
+// as they are mostly logic-less and can't access any
+// device functionality... only data that is supplied.
+// Now you can do :
+View viewFromText = loadTemplate("text6 'hello world'");
+
+</pre>
+</div>			
+			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">4. relative widths ( using percent % )</span></a></h2>
+			<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<div>
+<pre class="sh_javascript" >
+template.core
+{
+   list down
+   {
+      // Loop through calendar and show all data for that day.
+      // This includes day/date/weather/first event time
+      list across width=200
+      {
+         text 'this is 20% of parent' width='20%'
+      }
+      list across width='50%'
+      {
+         text 'list is 50% of parent' 
+      }
+   }
+}
+</pre>
+</div>	
+			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">5. optionally use mock data</span></a></h2>
+			<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<div>
+<pre class="sh_javascript" >
+// 1. define pre-processor variables
+define test-data
+setup
+{
+   // 2. Only include mock data if pre-processor 
+   // variable exists.
+   #if test-data
+      set events = 
+      [
+         { name: 'dev meeting', time: '10:00 am' },
+         { name: 'dev meeting', time: '10:00 am' },
+         { name: 'dev meeting', time: '10:00 am' },
+         { name: 'dev meeting', time: '10:00 am' }
+      ];
+   #endif
+}
+template.core
+{
+   list down
+   {
+      // 3. Now use the mock data
+      // Note: the list 'events' can be supplied
+      // from code. this example is for mock data	  
+      @each( event in events )
+      {			
+         text6.accent @event.name
+         text6.strong @event.location
+      }
+   }
+}
+</pre>
+</div>
+        </section>
         <section id="main_content">
+		
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Examples</span></a></h1>
+			<p>Lets look at some sample code in android to run a template</p>
+<div>
+<pre class="sh_javascript" >
+
+TemplateService svc = new TemplateService();
+TemplateContext ctx = new TemplateContext();
+svc.setContext(ctx);
+
+// 1. Fill the context with all the neccessary info.
+// The templating engine needs the android context,
+// The window manager to figure out screen dimensions
+// The resources to dynamically load some files
+// Finally create the data map to fill data for templates
+ctx.Context = getApplicationContext();
+ctx.Resources = getResources();
+ctx.WindowMgr = getWindowManager();
+ctx.Data = new TemplateData();
+
+// 2. Load the theme file ( just like css )
+ctx.loadTheme("theme_default.txt");
+
+
+// 3. Optional : set styles
+svc.setFont(Typeface.create("sans-serif-light", Typeface.NORMAL));
+svc.setThemeVariable("accentColor", "#12ab23");
+
+// 4. Put some data into template
+ctx.Data.putData("firstname", "john");
+ctx.Data.putData("lastname", "doe");
+
+// 5. Now execute template and get view
+svc.executeTemplate("text6 @firstname; text6 @lastname;");
+
+</pre>
+</div>		
+			
+			
+		
+		
           <h3>
 <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
@@ -73,4 +249,14 @@ $ git checkout gh-pages
       </div>
     </div>
   </body>
+  <script src="javascripts/jquery-1.11.1.min.js" ></script>
+  <script src="lib/external/syntaxhighlighter/js/sh_main.js" ></script>
+  <script src="lib/external/syntaxhighlighter/js/sh_javascript.js"> </script>
+  <script src="lib/external/syntaxhighlighter/js/sh_css.js"></script>
+  <script type="text/javascript">
+        $(document).ready(function() {
+            sh_highlightDocument();
+        });        
+    </script>
+  
 </html>
