@@ -370,4 +370,18 @@ footer a:hover {
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {}
 
+
+img.iconXSmall  { width:48px; height:48px; }
+img.iconSmall  { width:62px; height:62px; }
 img.iconMid  { width:100px; height:100px; }
+img.iconLarge  { width:140px; height:140px; }
+
+.tablelist tr td { vertical-align:middle; }
+.tablelist img  { margin-top:10px; margin-bottom:10px; }
+.featured {
+  letter-spacing: -1px;
+  font-size: 24px;
+  color: #303030;
+  font-weight: normal;
+  line-height: 1.3;
+}
