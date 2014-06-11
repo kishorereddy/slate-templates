@@ -33,8 +33,8 @@
         <hr>
 
 		<section  class="clearfix">
-			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Mobile templating</span></a></h1>
-			<p>Slate templates allow you to easily create <strong>native</strong> mobile user interfaces using a templating system. Think of it a hybrid between markdown + templating for mobile. </p>
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">A native mobile page and view builder</span></a></h1>
+			<p>Slate is a <a href="http://en.wikipedia.org/wiki/Web_template_system">templating engine</a> that allows you to easily and quickly create <strong>native</strong> mobile user interface pages and views (UI's) using simple to use templates. Here is a high-level overview of the process :</p>
 			<br/>
 			<div style="align:left">
 				<table border="0" cellspacing="0" cellpadding="0">
@@ -44,28 +44,94 @@
 						<td> <h2></h2> </td>
 						<td><img class="iconLarge" src="images/templatephone.png" /></td>
 					</tr>
-					<tr><td><div class="featured">template</div></td>
+					<tr><td><div class="featured">template</div><p>text template for your page with placeholders <code>@name</code> and <code>@date</code></p></td>
 						<td><h3>+</h3></td> 
-						<td><div class="featured">data</div></td>
+						<td><div class="featured">data</div><p>supply data for <code>@name</code> and <code>@date</code> to replace the placeholders</p></td>
 						<td><h3>=</h3></td> 
-						<td><div class="featured">native mobile UI</div></td>
+						<td><div class="featured">native mobile UI</div><p>slate combines your template with the data and builds a native mobile page/view</p></td>
 					</tr>
 				</table>
 			</div>
 			
+			<br/>
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Example</span></a></h1>
+			<table class="tablelist">
+				<tr>
+					<td>
+						<p>Let's look at a short example. More examples are at the bottom of this page and on <a href="https://github.com/kishorereddy/slate-templates">github</a>.
+						Slate templates are used in a production android calendar app on <strong>google play</strong>. The templates are used to generate cards or what we call "boards" on the home page. <br/>Check out <a href="https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar">Slate Calendar</a> 
+						</p>
+					</td>
+					<td><a href="https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar"><img class="iconMid" src="images/slatecalendar_logo_with_name.png"  /></a>
+					</td>
+					
+				</tr>
+			</table>
+			
+			<div>
+<pre class="sh_javascript" >
+template.core
+{
+   // 1. List items down vs across
+   list down
+   {
+      // 2. Sample heading and text
+      // Default heading sizes are h1 - h6
+      // and text sizes are text1 - text6
+      h2 'Sample heading in size 2'
+      text6 'sample paragraph text in size 6'
+      
+      // 3. You can apply styles to text
+      text6.accent 'this text is accented'
+      text6.strong 'this is bolded'
+	  
+      // 4. The named placeholders are replaced
+      text6.accent @companyName
+	  
+      // 5. Loop through calendar events and list 4 
+      @each ( event in @calendar.events limit=4 )
+      {
+         // 6. List each calendar event across
+         // NOTE: slate supports relative widths 
+         // to accommodate different screen sizes
+         list across width='80%'
+         {
+            // 7. You can reference the event 
+            // variable from the loop.
+            h5  @event.time
+            text6.accent  @event.title
+         }
+      }
+   }
+}
+</pre>
+</div>
+
 			<br/><br/>
-			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Features</span></a></h1>
-			<p>Slate templates allow you to easily create <strong>native</strong> mobile user interfaces using a templating system. Think of it a hybrid between markdown + templating for mobile. </p>
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Use cases</span></a></h1>
+			<p>There are several use cases for leveraging templates:</p>
 			<table class="tablelist" border="0" cellspacing="0" cellpadding="0">
 					
-					<tr><td><img src="images/feature_less2.png"  />  		      </td><td><div class="featured">33 % less than xml         </div></td></tr>
-					<tr><td><img src="images/feature_dynamic.png"  />		      </td><td><div class="featured">dynamic loading            </div></td></tr>
-					<tr><td><img src="images/feature_native.png"  /> 		      </td><td><div class="featured">generates native mobile UI </div></td></tr>					
+					<tr><td><img src="images/file-text.png"  />		      </td><td><div class="featured">manage content</div><p>easily manage about, contact, help pages</p></td></tr>
+					<tr><td><img src="images/window.png"  /> 		      </td><td><div class="featured">rapid prototyping</div><p>create fast native mobile UI mock ups</p></td></tr>
+					<tr><td><img class="iconSmall" src="images/usecase_savemoney.png"  />  		  </td><td><div class="featured">save costs </div><p>UI development takes time</td></tr>										
+					<tr><td><img src="images/feature_dynamic.png"  />		      </td><td><div class="featured">dynamic loading  </div><p>UI templates can reside on your server</td></tr>
+					
+				</table>
+			
+			<br/><br/>
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Features</span></a></h1>
+			<p>The templating features of slate have been designed for optimal productivity. Here are most of the major features:</p>
+			<table class="tablelist" border="0" cellspacing="0" cellpadding="0">
+					
+					<tr><td><img src="images/feature_less2.png"  />  		      </td><td><div class="featured">33 % smaller than xml        </div></td></tr>
+					<tr><td><img src="images/feature_native.png"  /> 		      </td><td><div class="featured"><strong>native</strong> mobile UI </div></td></tr>					
 					<tr><td><img class="iconSmall" src="images/ext/android.png" /></td><td><div class="featured">available for android             </div></td></tr>	
 					<tr><td><img class="iconSmall" src="images/ext/windows.png" /></td><td><div class="featured">available for windows             </div></td></tr>	
-					<tr><td><img src="images/feature_relwidth.png"  />            </td><td><div class="featured">relative widths            </div></td></tr>
+					<tr><td><img src="images/feature_relwidth.png"  />            </td><td><div class="featured">relative widths for screen sizes </div></td></tr>
 					<tr><td><img src="images/feature_secure.png"  />              </td><td><div class="featured">secure templating          </div></td></tr>
 					<tr><td><img class="iconSmall" src="images/database2.png" /></td><td><div class="featured">optionally use mock data           </div></td></tr>			
+					<tr><td><img class="iconSmall" src="images/feature_css.png" /></td><td><div class="featured">css / less like syntax for styling </div></td></tr>			
 					
 				</table>
 			
@@ -76,8 +142,11 @@
 			<p>Slate templates are NOT xml based. The syntax is similar to code. The following syntax significantly reduces the size</p>
 			<ul>
 				<li>Use braces { } instead on end tags</li>
-				<li>Text, Images, Lists have support a default attribute so you can leave it out altogether</li>
+				<li>All elements have attributes ( key=value pairs )</li>
+				<li>Some elements have blocks to allow child elements. 
+				<li>Elements have default attributes e.g. so you can leave out the key</li>
 				<li>Some attribute values which are numeric don't required being enclosed in quotes</li>
+				<li>You can set the style for the element easily using .style syntax</li>
 			</ul>
 <div>
 <pre class="sh_javascript" >
