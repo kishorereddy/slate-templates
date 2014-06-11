@@ -75,33 +75,16 @@ template.core
    // 1. List items down vs across
    list down
    {
-      // 2. Sample heading and text
-      // Default heading sizes are h1 - h6
-      // and text sizes are text1 - text6
+      // 2. Sample heading / text 
+      // h1 - h6 and text1 - text 6 supported
       h2 'Sample heading in size 2'
       text6 'sample paragraph text in size 6'
       
-      // 3. You can apply styles to text
+      // 3. Apply styles like accent / strong
       text6.accent 'this text is accented'
-      text6.strong 'this is bolded'
 	  
-      // 4. The named placeholders are replaced
-      text6.accent @companyName
-	  
-      // 5. Loop through calendar events and list 4 
-      @each ( event in @calendar.events limit=4 )
-      {
-         // 6. List each calendar event across
-         // NOTE: slate supports relative widths 
-         // to accommodate different screen sizes
-         list across width='80%'
-         {
-            // 7. You can reference the event 
-            // variable from the loop.
-            h5  @event.time
-            text6.accent  @event.title
-         }
-      }
+      // 4. Set placeholders to replace with data
+      text6.strong @companyName
    }
 }
 </pre>
@@ -112,9 +95,10 @@ template.core
 			<p>There are several use cases for leveraging templates:</p>
 			<table class="tablelist" border="0" cellspacing="0" cellpadding="0">
 					
-					<tr><td><img src="images/file-text.png"  />		      </td><td><div class="featured">manage content</div><p>easily manage about, contact, help pages</p></td></tr>
-					<tr><td><img src="images/window.png"  /> 		      </td><td><div class="featured">rapid prototyping</div><p>create fast native mobile UI mock ups</p></td></tr>
-					<tr><td><img class="iconSmall" src="images/usecase_savemoney.png"  />  		  </td><td><div class="featured">save costs </div><p>UI development takes time</td></tr>										
+					<tr><td><img class="iconSmall" src="images/file-text.png"  />		      </td><td><div class="featured">manage content</div><p>easily build both static and dynamic content</p></td></tr>
+					<tr><td><img class="iconSmall" src="images/window.png"  /> 		      </td><td><div class="featured">rapid prototyping</div><p>create fast native mobile UI mock ups</p></td></tr>
+					<tr><td><img class="iconSmall" src="images/feature_native2.png"  />      </td><td><div class="featured">cross platform UI </div><p>available for android + windows </p></td></tr>					
+					<tr><td><img class="iconSmall" src="images/usecase_savemoney.png"  />    </td><td><div class="featured">save costs </div><p>reduce UI development time</td></tr>										
 					<tr><td><img src="images/feature_dynamic.png"  />		      </td><td><div class="featured">dynamic loading  </div><p>UI templates can reside on your server</td></tr>
 					
 				</table>
@@ -125,82 +109,109 @@ template.core
 			<table class="tablelist" border="0" cellspacing="0" cellpadding="0">
 					
 					<tr><td><img src="images/feature_less2.png"  />  		      </td><td><div class="featured">33 % smaller than xml        </div></td></tr>
-					<tr><td><img src="images/feature_native.png"  /> 		      </td><td><div class="featured"><strong>native</strong> mobile UI </div></td></tr>					
-					<tr><td><img class="iconSmall" src="images/ext/android.png" /></td><td><div class="featured">available for android             </div></td></tr>	
-					<tr><td><img class="iconSmall" src="images/ext/windows.png" /></td><td><div class="featured">available for windows             </div></td></tr>	
-					<tr><td><img src="images/feature_relwidth.png"  />            </td><td><div class="featured">relative widths for screen sizes </div></td></tr>
+					<tr><td><img src="images/feature_relwidth.png"  />            </td><td><div class="featured">% widths for different screen sizes </div></td></tr>
 					<tr><td><img src="images/feature_secure.png"  />              </td><td><div class="featured">secure templating          </div></td></tr>
-					<tr><td><img class="iconSmall" src="images/database2.png" /></td><td><div class="featured">optionally use mock data           </div></td></tr>			
-					<tr><td><img class="iconSmall" src="images/feature_css.png" /></td><td><div class="featured">css / less like syntax for styling </div></td></tr>			
+					<tr><td><img class="iconSmall" src="images/database2.png" /></td><td><div class="featured">optionally use mock data for protyping           </div></td></tr>			
+					<tr><td><img class="iconSmall" src="images/feature_css.png" /></td><td><div class="featured">css / less like syntax for styling </div></td></tr>
 					
 				</table>
 			
+			<br/><br/>
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Availability</span></a></h1>
+			<p>Slate templates are currently available for android and windows.</p>
+			<table class="tablelist" border="0" cellspacing="0" cellpadding="0">
+					
+					<tr><td><img class="iconSmall" src="images/ext/android.png" /></td><td><div class="featured">available for android             </div></td></tr>	
+					<tr><td><img class="iconSmall" src="images/ext/windows.png" /></td><td><div class="featured">available for windows             </div></td></tr>	
+					
+				</table>
 			
 			<br/><br/>
 			
-			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">1. 33 % less than xml</span></a></h2>
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">More details</span></a></h1>
+			<p>Lets dive into some details..</p>
+			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">1. 33 % smaller than xml</span></a></h2>
 			<p>Slate templates are NOT xml based. The syntax is similar to code. The following syntax significantly reduces the size</p>
 			<ul>
-				<li>Use braces { } instead on end tags</li>
-				<li>All elements have attributes ( key=value pairs )</li>
-				<li>Some elements have blocks to allow child elements. 
-				<li>Elements have default attributes e.g. so you can leave out the key</li>
-				<li>Some attribute values which are numeric don't required being enclosed in quotes</li>
-				<li>You can set the style for the element easily using .style syntax</li>
+				<li>Uses braces { } instead on end tags</li>
+				<li>Elements have attributes ( key=value pairs )</li>
+				<li>Some elements have blocks to allow child elements, such as "list"
+				<li>Elements have default attributes, so you can leave out the "key="</li>
+				<li>Some attribute values which are numeric don't require being enclosed in quotes</li>
+				<li>You can set the style for the element easily using .style as in text.strong </li>
+				<li>You can name an element by using :name after the tag as in text:firstName </li>
 			</ul>
 <div>
 <pre class="sh_javascript" >
 template.core
 {
-   // Loop through calendar and show all data for that day.
-   // This includes day/date/weather/first event time
-   @each ( day in @calendar.days limit=4 )
+   // 1. List items down vs across
+   list down
    {
-      list.col3 across
+      // 2. Sample heading / text 
+      // h1 - h6 and text1 - text 6 supported
+      h2 'Sample heading in size 2'
+      text6 'sample paragraph text in size 6'
+      
+      // 3. Apply styles like accent / strong
+      text6.accent 'this text is accented'
+	  
+      // 4. Set placeholders to replace with data
+      text6.strong @companyName
+	  
+      // 5. Loop over calendar events data, and list 4 
+      @each ( event in @calendar.events limit=4 )
       {
-         h6.dayName  @day.dayName
-         text6.cell  @day.dayDate
-         img.iconwt  @day.weatherImage
-         text6.cell  @day.tempHigh
-         text6.cell  @day.tempLow
-         text6.cell  @day.firstEventTimeAsText
-         text6.cell  @day.totalEventsText
-         text6.cell  @day.totalBDaysAsText
+         // 6. List each calendar event across
+         // Relative widths for different screen sizes
+         list across width='80%'
+         {
+            // 7. Reference the event variable from loop
+            h5  @event.time
+            text6.accent  @event.title
+         }
       }
    }
 }
 </pre>
 </div>
 			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">2. cross-platform</span></a></h2>
-			<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+			<p>Currently, slate templates are available for android and windows as libraries. For android, slate templates are used in a production android calendar app, that is currently available on google play. Check out <a href="https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar">Slate Calendar</a>. The windows version is also available as more of an alpha version.</p>
 			<section class="clearfix" >
 				<table>
 				<tr><td><div ><img class="iconMid" src="images/ext/android.png"  /></div></td><td><div ><img class="iconMid" src="images/ext/windows.png"  /></div></td></tr>	
 				<tr><td>android JAVA library</td><td>C# library for windows/phone</td></tr>	
 				</table>
 			</section>
+			<br/>
 			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">3. dynamic</span></a></h2>
-			<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+			<p>With slate, you can store your templates on your server or cloud storage and fetch them at runtime! This allows you to control your UI and display centrally without having to re-submit your app to the store. Compare this with android and windows, where your pages / controls / views are representing in xml files that <strong>have</strong> to be packaged as part of your app.</p>
 <div>
 <pre class="sh_javascript" >
 
-// Yout android or windows xml or xaml layouts have
-// to be in a file packaged in the app.
-// So you typically load the layout like so:
+// ANDROID : In android your UI is an xml file 
+// packaged in the app. you load the layout like :
 View viewFromFile = inflate(R.layout.eventInfo, null);
 
-// With slate, you can supply just a string representing
-// the layout. This enables you to get layout/string from 
-// anywhere. Don't worry... the templates are safe / secure 
-// as they are mostly logic-less and can't access any
-// device functionality... only data that is supplied.
-// Now you can do :
-View viewFromText = loadTemplate("text6 'hello world'");
+// SLATE: You have different ways to load the UI
+// 1. Load from a string
+View viewFromText = loadTemplate("text6:name 'user name'");
 
+// 2. Load template file from assets folder.
+View viewFromFile = loadTemplateFile("page_about.txt");
+
+// 3. Load from your server 
+// ( basically just download file and load as text)
+String templateContent = getFromServer("page_about.txt");
+View viewFromText = loadTemplate(templateContent);
+
+// Don't worry... the templates are safe / secure 
+// as they are mostly logic-less and can't access any
+// device functionality... only data supplied.
 </pre>
 </div>			
 			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">4. relative widths ( using percent % )</span></a></h2>
-			<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+			<p>One of the core problems with mobile UI development is handling different resolutions. Slate solves a big part of this problem by supporting relative or percentage based widths. Typically, you have to set up the width of an android control to be MATCH_PARENT, WRAP_CONTENT or a phyical number dp (device independent pixels). The problem is that even the dp's vary from device to device. By supporting % widths ( in addition to WRAP_CONTENT  ), slates solves a number of resolution issues, while keeping the code base very small. Later on we will see how relative margins and padding are also supported.</p>
 <div>
 <pre class="sh_javascript" >
 template.core
@@ -222,7 +233,7 @@ template.core
 </pre>
 </div>	
 			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">5. optionally use mock data</span></a></h2>
-			<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+			<p>When initially designing your page / UI, you have to display some fake data for testing purposes. Slate has a very unique feature that allows definition of fake or mock data for prototyping / testing purposes. You can easily enable and disable mock data with the use of pre-processor variables. See example below:</p>
 <div>
 <pre class="sh_javascript" >
 // 1. define pre-processor variables
@@ -257,6 +268,92 @@ template.core
 }
 </pre>
 </div>
+			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">6. Css like styling</span></a></h2>
+			<p>You can not have a dynamic UI creation process without support customization and styling of the content. This is where the Slate Css like style sheets come in. Slate allows you to tag your UI elements ( like text, heading, list, etc ) with styles that are placed in a separate "stylesheet" ( very similar to css ). The added benefit here is that the stylesheets :</p>
+			<ol>
+				<li>support internal variables ( from inside file )</li>
+				<li>support external variables ( from your code )</li>
+				<li>are very similar to css so your learning curve is low</li>
+				<li>allow for inheritance to enable reuse of style groups</li>
+				<li>allows for math calculations</li>
+			</ol>
+<div>
+<pre class="sh_css" >
+vars
+{	
+   screenWidth:		   @app.screenWidth;
+   screenHeight:          @app.screenHeight;
+   pageWidth:             @app.pageWidth;
+   themeColor:            @app.themeColor;
+   baseTopFontSize:       @app.textFontSizeMax;
+   baseTextColor:         @app.textColor;
+   baseTextColorAccent:   @app.textColorAccent;
+   baseTextColorLight:    @app.textColorLight;	
+   baseTextColorContrast: @app.textColorContrast;
+   baseTextHeaderWeight:  bold;
+}
+
+group:core
+{
+   h1 { font-weight: @baseTextHeaderWeight; }
+   h2 { font-weight: @baseTextHeaderWeight; }
+   h3 { font-weight: @baseTextHeaderWeight; }
+   h4 { font-weight: @baseTextHeaderWeight; }
+   h5 { font-weight: @baseTextHeaderWeight; }
+   h6 { font-weight: @baseTextHeaderWeight; }
+   
+	
+   text1 { color: @baseTextColor;  }
+   text2 { color: @baseTextColor;  }
+   text3 { color: @baseTextColor;  }
+   text4 { color: @baseTextColor;  }
+   text5 { color: @baseTextColor;  }
+   text6 { color: @baseTextColor;  }
+	
+   .light        { color: @baseTextColorLight;  }
+   .strong       { font-weight:bold; }
+   .accentlight  { color: @baseTextColorAccent; }
+   .accent       { color: @baseTextColorAccent; }
+   .accentdark   { color: @baseTextColorAccent; }
+   .label        { color: Gray; }
+   .contrast     { color: @baseTextColorContrast; }
+   .white        { color:'White'; }
+	
+   .separator { background-color:'#cccccc'; }
+   
+   .left   { alignh:'center'; }
+   .center { alignh:'center'; }
+   .right  { alignh:'right';  }
+	
+   .col1  { width: ( @screenWidth * .08 ); }	
+   .col2  { width: ( @screenWidth * .16 ); }
+   .col3  { width: ( @screenWidth * .25 ); }
+   .col4  { width: ( @screenWidth * .33 ); }
+   .col5  { width: ( @screenWidth * .42 ); }
+   .col6  { width: ( @screenWidth * .50 ); }
+   .col7  { width: ( @screenWidth * .58 ); }
+   .col8  { width: ( @screenWidth * .66 ); }
+   .col9  { width: ( @screenWidth * .75 ); }	
+   .col10 { width: ( @screenWidth * .83 ); }
+   .col11 { width: ( @screenWidth * .91 ); }
+   .col12 { width:   @screenWidth      ; }
+   	
+   .iconXSmall { width: @app.iconXSmall; }
+   .iconSmall  { width: @app.iconSmall; }
+   .iconMedium { width: @app.iconMedium; }
+   .iconLarge  { width: @app.iconLarge; }
+   .iconLarge  { width: @app.iconXLarge; }
+   
+   .marginl1   { margin-left: ( @screenWidth * .01 ); }
+   .marginl2   { margin-left: ( @screenWidth * .02 ); }
+   .marginl3   { margin-left: ( @screenWidth * .03 ); }
+   .marginl4   { margin-left: ( @screenWidth * .04 ); }	
+   .marginl5   { margin-left: ( @screenWidth * .05 ); }	
+   .marginl6   { margin-left: ( @screenWidth * .06 ); }	
+   .marginl7   { margin-left: ( @screenWidth * .07 ); }	
+}
+</pre>
+</div>			
         </section>
         <section id="main_content">
 		
