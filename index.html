@@ -58,7 +58,7 @@
 			<table class="tablelist">
 				<tr>
 					<td>
-						<p>Let's look at a short example. More examples are at the bottom of this page and on <a href="https://github.com/kishorereddy/slate-templates">github</a>.
+						<p>Let's look at a short example. More examples available at the bottom of this page and on <a href="https://github.com/kishorereddy/slate-templates">github</a>.
 						Slate templates are used in a production android calendar app on <strong>google play</strong>. The templates are used to generate cards or what we call "boards" on the home page. <br/>Check out <a href="https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar">Slate Calendar</a> 
 						</p>
 					</td>
@@ -91,13 +91,13 @@ template.core
 </div>
 
 			<br/><br/>
-			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Use cases</span></a></h1>
-			<p>There are several use cases for leveraging templates:</p>
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Uses</span></a></h1>
+			<p>There are several reasons for using slate templates for android & windows:</p>
 			<table class="tablelist" border="0" cellspacing="0" cellpadding="0">
 					
 					<tr><td><img class="iconSmall" src="images/file-text.png"  />		      </td><td><div class="featured">manage content</div><p>easily build both static and dynamic content</p></td></tr>
 					<tr><td><img class="iconSmall" src="images/window.png"  /> 		      </td><td><div class="featured">rapid prototyping</div><p>create fast native mobile UI mock ups</p></td></tr>
-					<tr><td><img class="iconSmall" src="images/feature_native2.png"  />      </td><td><div class="featured">cross platform UI </div><p>available for android + windows </p></td></tr>					
+					<tr><td><img class="iconSmall" src="images/feature_native2.png"  />      </td><td><div class="featured">cross platform UI </div><p>write your UI once for both android & windows </p></td></tr>					
 					<tr><td><img class="iconSmall" src="images/usecase_savemoney.png"  />    </td><td><div class="featured">save costs </div><p>reduce UI development time</td></tr>										
 					<tr><td><img src="images/feature_dynamic.png"  />		      </td><td><div class="featured">dynamic loading  </div><p>UI templates can reside on your server</td></tr>
 					
@@ -108,11 +108,11 @@ template.core
 			<p>The templating features of slate have been designed for optimal productivity. Here are most of the major features:</p>
 			<table class="tablelist" border="0" cellspacing="0" cellpadding="0">
 					
-					<tr><td><img src="images/feature_less2.png"  />  		      </td><td><div class="featured">33 % smaller than xml        </div></td></tr>
-					<tr><td><img src="images/feature_relwidth.png"  />            </td><td><div class="featured">% widths for different screen sizes </div></td></tr>
-					<tr><td><img src="images/feature_secure.png"  />              </td><td><div class="featured">secure templating          </div></td></tr>
-					<tr><td><img class="iconSmall" src="images/database2.png" /></td><td><div class="featured">optionally use mock data for protyping           </div></td></tr>			
-					<tr><td><img class="iconSmall" src="images/feature_css.png" /></td><td><div class="featured">css / less like syntax for styling </div></td></tr>
+					<tr><td><img src="images/feature_less2.png"  />  		      </td><td><div class="featured">33 % smaller than xml        </div><p>intuitive, and very concise syntax</p></td></tr>
+					<tr><td><img src="images/feature_relwidth.png"  />            </td><td><div class="featured">% widths for different screen sizes </div><p>relative widths to support various screen sizes</p></td></tr>
+					<tr><td><img src="images/feature_secure.png"  />              </td><td><div class="featured">secure templating          </div><p>mostly logic-less, no access to device, only data</p></td></tr>
+					<tr><td><img class="iconSmall" src="images/database2.png" /></td><td><div class="featured">optionally use mock data for protyping           </div><p>easily use real or fake data for testing</p></td></tr>			
+					<tr><td><img class="iconSmall" src="images/feature_css.png" /></td><td><div class="featured">css / less like syntax for styling </div><p>low learning curve due</p></td></tr>
 					
 				</table>
 			
@@ -131,7 +131,7 @@ template.core
 			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">More details</span></a></h1>
 			<p>Lets dive into some details..</p>
 			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">1. 33 % smaller than xml</span></a></h2>
-			<p>Slate templates are NOT xml based. The syntax is similar to code. The following syntax significantly reduces the size</p>
+			<p>Slate syntax is very intuitive, concise and similar to code. As a result, it significantly reduces both the complexity and size.</p>
 			<ul>
 				<li>Uses braces { } instead on end tags</li>
 				<li>Elements have attributes ( key=value pairs )</li>
@@ -159,14 +159,20 @@ template.core
       // 4. Set placeholders to replace with data
       text6.strong @companyName
 	  
-      // 5. Loop over calendar events data, and list 4 
+      // 5. Set the name of the element using :name
+      text6:appDesc 'native mobile templating'
+
+      // 6. Tags are also available
+      text6 'kishore' tag='firstname'
+	  
+      // 7. Loop over calendar events data, and list 4 
       @each ( event in @calendar.events limit=4 )
       {
-         // 6. List each calendar event across
+         // 8. List each calendar event across
          // Relative widths for different screen sizes
          list across width='80%'
          {
-            // 7. Reference the event variable from loop
+            // 9. Reference the event variable from loop
             h5  @event.time
             text6.accent  @event.title
          }
