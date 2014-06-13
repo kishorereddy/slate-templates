@@ -77,8 +77,8 @@ template.core
    {
       // 2. Sample heading / text 
       // h1 - h6 and text1 - text 6 supported
-      h2 'Sample heading in size 2'
-      text6 'sample paragraph text in size 6'
+      h2 'heading in size 2'
+      p  'sample paragraph text'
       
       // 3. Apply styles like accent / strong
       text6.accent 'this text is accented'
@@ -150,20 +150,20 @@ template.core
    {
       // 2. Sample heading / text 
       // h1 - h6 and text1 - text 6 supported
-      h2 'Sample heading in size 2'
-      text6 'sample paragraph text in size 6'
+      h2 'heading in size 2'
+      p  'sample paragraph text'
       
-      // 3. Apply styles like accent / strong
+      // 3. Apply styles to paragraph text
       text6.accent 'this text is accented'
 	  
       // 4. Set placeholders to replace with data
       text6.strong @companyName
 	  
       // 5. Set the name of the element using :name
-      text6:appDesc 'native mobile templating'
+      p:appDesc 'native mobile templating on android'
 
       // 6. Tags are also available
-      text6 'kishore' tag='firstname'
+      p 'kishore' tag='firstname'
 	  
       // 7. Loop over calendar events data, and list 4 
       @each ( event in @calendar.events limit=4 )
@@ -228,11 +228,11 @@ template.core
       // This includes day/date/weather/first event time
       list across width=200
       {
-         text 'this is 20% of parent' width='20%'
+         p 'this is 20% of parent' width='20%'
       }
       list across width='50%'
       {
-         text 'list is 50% of parent' 
+         p 'list is 50% of parent' 
       }
    }
 }
