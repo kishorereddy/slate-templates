@@ -369,40 +369,31 @@ group:core
         </section>
         <section id="main_content">
 		
-			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Examples</span></a></h1>
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Android example</span></a></h1>
 			<p>Lets look at some sample code in android to run a template</p>
 <div>
 <pre class="sh_javascript" >
+import com.slate.templates.templating.*;
+...
 
 TemplateService svc = new TemplateService();
-TemplateContext ctx = new TemplateContext();
-svc.setContext(ctx);
 
 // 1. Fill the context with all the neccessary info.
-// The templating engine needs the android context,
-// The window manager to figure out screen dimensions
-// The resources to dynamically load some files
-// Finally create the data map to fill data for templates
-ctx.Context = getApplicationContext();
-ctx.Resources = getResources();
-ctx.WindowMgr = getWindowManager();
-ctx.Data = new TemplateData();
+// - android context to create controls
+// - window manager to figure out screen dimensions
+// - resources to load files 
+svc.initialize(aboutActivity);
 
-// 2. Load the theme file ( just like css )
-ctx.loadTheme("theme_default.txt");
+// 2. Put some data into template
+svc.putData("firstname", "john");
 
+// 3. Load the theme file ( just like css )
+svc.loadTheme("theme_default.txt");
 
-// 3. Optional : set styles
-svc.setFont(Typeface.create("sans-serif-light", Typeface.NORMAL));
-svc.setThemeVariable("accentColor", "#12ab23");
+// 4. Now execute template and get view
+TemplateView tview = svc.executeTemplate("text6 @firstname");
 
-// 4. Put some data into template
-ctx.Data.putData("firstname", "john");
-ctx.Data.putData("lastname", "doe");
-
-// 5. Now execute template and get view
-svc.executeTemplate("text6 @firstname; text6 @lastname;");
-
+// NOTE: More options are available, this is a short example
 </pre>
 </div>		
 			
