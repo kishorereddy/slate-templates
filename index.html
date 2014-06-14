@@ -33,42 +33,39 @@
         <hr>
 
 		<section  class="clearfix">
-			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">A native mobile page and view builder</span></a></h1>
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Native mobile templating</span></a></h1>
 			<p>Slate is a <a href="http://en.wikipedia.org/wiki/Web_template_system">templating engine</a> that allows you to easily and quickly create <strong>native</strong> mobile user interface pages and views (UI's) using simple to use templates. Here is a high-level overview of the process :</p>
 			<br/>
 			<div style="align:left">
 				<table border="0" cellspacing="0" cellpadding="0">
+					<tr><td><div class="featured">template</div><br/></td>
+						<td><h1><span class="accent">+</span></h1></td> 
+						<td><div class="featured">data</div><br/></td>
+						<td><h1><span class="accent">=</span></h1></td> 
+						<td><div class="featured">native mobile UI</div><br/></td>
+					</tr>
 					<tr><td><img class="iconLarge" src="images/template.png"  /></td> 
 						<td> <h2></h2> </td> 
 						<td><img class="iconLarge" src="images/database2.png"  />   </td>
 						<td> <h2></h2> </td>
 						<td><img class="iconLarge" src="images/templatephone.png" /></td>
 					</tr>
-					<tr><td><div class="featured">template</div><p>text template for your page with placeholders <code>@name</code> and <code>@date</code></p></td>
-						<td><h3>+</h3></td> 
-						<td><div class="featured">data</div><p>supply data for <code>@name</code> and <code>@date</code> to replace the placeholders</p></td>
-						<td><h3>=</h3></td> 
-						<td><div class="featured">native mobile UI</div><p>slate combines your template with the data and builds a native mobile page/view</p></td>
+					<tr><td><p>text template for your page with placeholders <code>@name</code> and <code>@date</code></p></td>
+						<td></td> 
+						<td><p>supply data for <code>@name</code> and <code>@date</code> to replace the placeholders</p></td>
+						<td></td> 
+						<td><p>slate combines your template with the data and builds a native mobile page/view</p></td>
 					</tr>
 				</table>
 			</div>
 			
 			<br/>
 			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Example</span></a></h1>
-			<table class="tablelist">
-				<tr>
-					<td>
-						<p>Let's look at a short example. More examples available at the bottom of this page and on <a href="https://github.com/kishorereddy/slate-templates">github</a>.
-						Slate templates are used in a production android calendar app on <strong>google play</strong>. The templates are used to generate cards or what we call "boards" on the home page. <br/>Check out <a href="https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar">Slate Calendar</a> 
-						</p>
-					</td>
-					<td><a href="https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar"><img class="iconMid" src="images/slatecalendar_logo_with_name.png"  /></a>
-					</td>
-					
-				</tr>
-			</table>
+			<p>Let's look at a short example. More examples available at the bottom of this page and on <a href="https://github.com/kishorereddy/slate-templates">github</a>.
+			Slate templates are used in a production android calendar app on <strong>google play</strong>. The templates are used to generate cards or what we call "boards" on the home page. Check out <a href="https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar">Slate Calendar</a> for live examples.
+			</p>
 			
-			<div>
+<div>
 <pre class="sh_javascript" >
 template.core
 {
@@ -77,25 +74,31 @@ template.core
    {
       // 2. Sample heading / text 
       // h1 - h6 and text1 - text 6 supported
-      h2 'heading in size 2'
-      p  'sample paragraph text'
+      h4 @companyName
+      p  'A mobile development company'
       
       // 3. Apply styles like accent / strong
-      text6.accent 'this text is accented'
+      text6.accent 'Slate Calendar'
 	  
       // 4. Set placeholders to replace with data
-      text6.strong @companyName
+      text6.strong @appDesc
    }
 }
 </pre>
 </div>
 
+			<table class="tablelisting">
+				<tr>
+					<td><img src="images/ic_arrow_down.png"  /></td>			
+				</tr>
+			</table>
+			<img width="100%" src="images/sample_output.png"  />
 			<br/><br/>
 			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Uses</span></a></h1>
 			<p>There are several reasons for using slate templates for android & windows:</p>
 			<table class="tablelist" border="0" cellspacing="0" cellpadding="0">
 					
-					<tr><td><img class="iconSmall" src="images/file-text.png"  />		      </td><td><div class="featured">manage content</div><p>easily build both static and dynamic content</p></td></tr>
+					<tr><td><img class="iconSmall" src="images/file-text.png"  />		      </td><td><div class="featured">easily build content</div><p>easily build both static and dynamic content</p></td></tr>
 					<tr><td><img class="iconSmall" src="images/window.png"  /> 		      </td><td><div class="featured">rapid prototyping</div><p>create fast native mobile UI mock ups</p></td></tr>
 					<tr><td><img class="iconSmall" src="images/feature_native2.png"  />      </td><td><div class="featured">cross platform UI </div><p>write your UI once for both android & windows </p></td></tr>					
 					<tr><td><img class="iconSmall" src="images/usecase_savemoney.png"  />    </td><td><div class="featured">save costs </div><p>reduce UI development time</td></tr>										
