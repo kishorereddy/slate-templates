@@ -65,31 +65,24 @@
 			<table  border="0" cellspacing="0" cellpadding="0">
 					
 					<tr><td><img class="iconSmall" src="images/ext/android.png" /></td><td><img class="iconSmall" src="images/ext/windows.png" /></td></tr>	
-					<tr><td><div class="featured">available for android             </div></td><td><div class="featured">available for windows             </div></td></tr>	
-					
+					<!--<tr><td><div class="featured">available for android             </div></td><td><div class="featured">available for windows             </div></td></tr>	
+					-->
 				</table>
 			<br/><br/>
-			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Example</span></a></h1>
-			<p>Let's look at a short example. More examples available at the bottom of this page and on <a href="https://github.com/kishorereddy/slate-templates">github</a>.
-			Slate templates are used in a production android calendar app on <strong>google play</strong>. The templates are used to generate cards or what we call "boards" on the home page. Check out <a href="https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar">Slate Calendar</a> for live examples.
-			</p>
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Slate template example</span></a></h1>
+			<p>Let's look at a short example. More examples are available at the bottom of this page and on <a href="https://github.com/kishorereddy/slate-templates">github</a>.
+			There is also a full documentation and api guide on the github wiki for slate templates.</p>
 			
 <div>
 <pre class="sh_javascript" >
 template.core
 {
-   // 1. List items down vs across
    list down
    {
-      // 2. Sample heading / text 
-      // h1 - h6 and text1 - text 6 supported
       h4 @companyName
       p  'A mobile development company'
       
-      // 3. Apply styles like accent / strong
-      text6.accent 'Slate Calendar'
-	  
-      // 4. Set placeholders to replace with data
+      text6.accent 'Slate Calendar'	  
       text6.strong @appDesc
    }
 }
@@ -105,6 +98,46 @@ template.core
 					</td>
 				</tr>
 			</table>
+<br/><br/>
+<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Same UI in Android</span></a></h2>
+<p>Because of easy and concise syntax in slate templates, it cuts down almost 40% of the xml required to build the same UI in android and windows! </p>
+<br/>			
+<div>
+<pre class="sh_xml">
+&lt;LinearLayout
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;wrap_content&quot;
+    android:orientation=&quot;vertical&quot; &gt;
+    
+    &lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        style=&quot;@style/H4&quot;
+        android:fontFamily=&quot;sans-serif-light&quot;      	        
+        android:text=&quot;@string/companyName&quot; /&gt;
+    &lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        style=&quot;@style/Text6&quot;
+        android:fontFamily=&quot;sans-serif-light&quot;
+        android:text=&quot;A mobile development company&quot; /&gt;
+    
+    &lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        style=&quot;@style/Text6.Accent&quot;
+        android:fontFamily=&quot;sans-serif-light&quot;  	        
+        android:text=&quot;Slate Calendar&quot; /&gt;
+    &lt;TextView
+        android:id=&quot;@+id/txtAboutVersion&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        style=&quot;@style/Text6.Contrast&quot;
+        android:fontFamily=&quot;sans-serif-light&quot;  
+        android:text=&quot;@string/appDesc&quot; /&gt;
+&lt;/LinearLayout&gt;
+</pre>
+</div>
 			<br/><br/>
 			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Uses</span></a></h1>
 			<p>There are several reasons for using slate templates for android & windows:</p>
@@ -132,10 +165,22 @@ template.core
 				</table>
 			
 			<br/><br/>
-			
+			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">Samples</span></a></h1>
+			<p>Slate templates are used in a production android calendar app on <strong>google play</strong>. The templates are used to generate cards or what we call "boards" on the home page. Check out <a href="https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar">Slate Calendar</a> for live examples.
+			</p><table class="tablelisting">
+				<tr>
+					<td><img width="300px" src="images/slate_ui_sample1.png"  /><br/><br/><br/></td>
+					<td><img width="300px" src="images/slate_ui_sample2.png"  /><br/><br/><br/></td>
+				</tr>
+				<tr>
+					<td><img width="300px" src="images/slate_ui_sample3.png"  /></td>
+					<td><img width="300px" src="images/slate_ui_sample2.png"  /></td>
+				</tr>
+			</table>
+			<br/><br/>
 			<h1><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">More details</span></a></h1>
 			<p>Lets dive into some details..</p>
-			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">1. Easier and smaller than xml by 33%</span></a></h2>
+			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">1. easier, and smaller than xml by 40 %</span></a></h2>
 			<p>Slate syntax is very intuitive, concise and similar to code. As a result, it significantly reduces both the complexity and size.</p>
 			<ul>
 				<li>Uses braces { } instead on end tags</li>
@@ -279,7 +324,13 @@ template.core
 }
 </pre>
 </div>
-			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">6. Css like styling</span></a></h2>
+
+	
+			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">6. secure</span></a></h2>
+			<p>Slate templates are secure in that they can only access data ( lists, objects, maps ) that you supply to the system. There is currently no way for the templates to access any system / device level features.
+			Also, the templating system has been designed to be mostly logic-less, similar to handlebars or moustache. For example, there are no if conditions but you can optionally load/disable controls from being shown.</p>
+
+			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">7. css like styling</span></a></h2>
 			<p>You can not have a dynamic UI creation process without support customization and styling of the content. This is where the Slate Css like style sheets come in. Slate allows you to tag your UI elements ( like text, heading, list, etc ) with styles that are placed in a separate "stylesheet" ( very similar to css ). The added benefit here is that the stylesheets :</p>
 			<ol>
 				<li>support internal variables ( from inside file )</li>
@@ -409,30 +460,33 @@ TemplateView tview = svc.executeTemplate("text6 @firstname");
 
 <h1><a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span>License</a></h1>
 <p>Slate templates library is closed source for the time being, with potential plugins / extensions that may become open-source. You can use the library given the following restrictions and considerations:</p>
-
-	<p>1. acknowledge use of slate templates in your app ( in either an about or help page )</p>
-	<p>2. <strong>free for personal use. this means that your mobile app must be FREE ( paid / in-app purchase based apps do not count )</strong></p>
-	<p>3. beta version is free for both personal and commercial use ( without any modifications ) </p>
-	<p>4. <strong>license fee is $30 for commercial use for 1 year ( for any paid + in-app purchase based apps ) for production version</strong></p>
-	<p>5. this is a beta version and may have issues, we are targeting a production / release version for mid July.</p>
-	<p>6. you can not make any modifications to the source code</p>
-	<p>7. you can not redistribute the jar file to others and or as part of a library / tools that you are selling</p>
-	<a href="https://github.com/kishorereddy" class="user-mention">Check full license here</a>
-<br/><br/>
+<a href="https://github.com/kishorereddy/slate-templates" class="user-mention">Check full license here</a> <br/><br/>
+<ol>
+	<li>acknowledge use of slate templates in your app ( in either an about or help page )</li>
+	<li><strong>free for personal use, your mobile app must be free without in-app purchases.</strong></li>
+	<li>beta version is free for both personal and commercial use ( without any modifications ) </li>
+	<li><strong>license fee is $30 for commercial use for 1 year for production version</strong></li>
+	<li>this beta version may have issues, we are targeting a production version for mid July.</li>
+	<li>you can not decompile and make any modifications to the code</li>
+	<li>you can not redistribute the jar file to as part of a library / tools that you are selling</li>
+</ol>
+	<br/>
 
 <h1><a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link">About us</span></a></h1>
 <p>Slate Templates is a product of <a href="http://codehelixsolutions.com" class="anchor">Code Helix Solutions Inc.</a>, a software and mobile development company. We develop open-source software, and are also currently focused on developing tools for the android and windows phone platforms. Slate Calendar is our core mobile application.</p>
-<p><strong>Kishore Reddy</strong> is founder of CodeHelix Solutions Inc., and architect of Slate templates, Slate Calendar and multiple open-source projects</p>
-<p><strong>Mahesh Gottumukkala</strong> is co-founder of CodeHelix Solutions Inc., and is involved in product and project management, research & analysis, and quality-assurance.</p>
+<div><strong>Kishore Reddy</strong></div>
+<p>Kishore is founder of CodeHelix Solutions Inc., and architect of Slate templates, Slate Calendar and multiple open-source projects</p>
+<div><strong>Mahesh Gottumukkala</strong></div>
+<p>Mahesh is co-founder of CodeHelix Solutions Inc., and is involved in product and project management, research & analysis, and quality-assurance.</p>
 
 <br/>
 <h1><a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span>Contact</a></h1>
-<div><strong>Contact</strong></div>
 <p>You can contact <a href="https://github.com/kishorereddy" class="user-mention">@kishorereddy</a> for more information about slate templates. 
 <div><strong>Issues and feature requests</strong></div>
-<p>Feel free to post questions, issues, feature requests on <a href="https://github.com/kishorereddy/slate-templates/issues">Slate Templates</a></p>
+<p>Feel free to post questions, issues, feature requests on the <a href="https://github.com/kishorereddy/slate-templates/issues">git hub issue tracker.</a>
+We will be monitoring this routinely for both issues ( in beta ) as well potential feature requests. You will also find a list of prioritized upcoming features.</p>
 <div><strong>Documentation</strong></div>
-<p>Also, check out the documentation on the <a href="https://github.com/kishorereddy/slate-templates/wiki">Slate Templates Wiki</a></p>
+<p>Documentation on how to use the templates are located at the <a href="https://github.com/kishorereddy/slate-templates/wiki">Slate Templates Wiki</a>. You will also find docs on how to integrate with android and soon windows.</p>
 
 </p>
 
@@ -450,6 +504,7 @@ TemplateView tview = svc.executeTemplate("text6 @firstname");
   <script src="javascripts/jquery-1.11.1.min.js" ></script>
   <script src="lib/external/syntaxhighlighter/js/sh_main.js" ></script>
   <script src="lib/external/syntaxhighlighter/js/sh_javascript.js"> </script>
+  <script src="lib/external/syntaxhighlighter/js/sh_xml.js"> </script>
   <script src="lib/external/syntaxhighlighter/js/sh_css.js"></script>
   <script type="text/javascript">
         $(document).ready(function() {
