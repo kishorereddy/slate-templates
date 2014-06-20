@@ -83,7 +83,7 @@ template.core
       p  'A mobile development company'
       
       text6.accent 'Slate Calendar'	  
-      text6.strong @appDesc
+      text6 @appAbout
    }
 }
 </pre>
@@ -134,7 +134,7 @@ template.core
         android:layout_height=&quot;wrap_content&quot;
         style=&quot;@style/Text6.Contrast&quot;
         android:fontFamily=&quot;sans-serif-light&quot;  
-        android:text=&quot;@string/appDesc&quot; /&gt;
+        android:text=&quot;@string/appAbout&quot; /&gt;
 &lt;/LinearLayout&gt;
 </pre>
 </div>
@@ -156,7 +156,7 @@ template.core
 			<p>The templating features of slate have been designed for optimal productivity. Here are most of the major features:</p>
 			<table class="tablelist" border="0" cellspacing="0" cellpadding="0">
 					
-					<tr><td><img src="images/feature_less2.png"  />  		      </td><td><div class="featured">33 % smaller than xml        </div><p>intuitive, and very concise syntax</p></td></tr>
+					<tr><td><img src="images/feature_less2.png"  />  		      </td><td><div class="featured">40 % smaller than xml        </div><p>intuitive, and very concise syntax</p></td></tr>
 					<tr><td><img src="images/feature_relwidth.png"  />            </td><td><div class="featured">% widths for different screen sizes </div><p>relative widths to support various screen sizes</p></td></tr>
 					<tr><td><img src="images/feature_secure.png"  />              </td><td><div class="featured">secure templating          </div><p>mostly logic-less, no access to device, only data</p></td></tr>
 					<tr><td><img class="iconSmall" src="images/database2.png" /></td><td><div class="featured">optionally use mock data for protyping           </div><p>easily use real or fake data for testing</p></td></tr>			
@@ -261,8 +261,8 @@ View viewFromFile = loadTemplateFile("page_about.txt");
 String templateContent = getFromServer("page_about.txt");
 View viewFromText = loadTemplate(templateContent);
 
-// Don't worry... the templates are safe / secure 
-// as they are mostly logic-less and can't access any
+// The templates are safe / secure as they 
+// are mostly logic-less and can't access any
 // device functionality... only data supplied.
 </pre>
 </div>			
@@ -274,8 +274,6 @@ template.core
 {
    list down
    {
-      // Loop through calendar and show all data for that day.
-      // This includes day/date/weather/first event time
       list across width=200
       {
          p 'this is 20% of parent' width='20%'
@@ -465,10 +463,12 @@ TemplateView tview = svc.executeTemplate("text6 @firstname");
 	<li>acknowledge use of slate templates in your app ( in either an about or help page )</li>
 	<li><strong>free for personal use, your mobile app must be free without in-app purchases.</strong></li>
 	<li>beta version is free for both personal and commercial use ( without any modifications ) </li>
-	<li><strong>license fee is $30 for commercial use for 1 year for production version</strong></li>
+	<li><strong>license fee is $40 for commercial use for 1 year for production version</strong></li>
 	<li>this beta version may have issues, we are targeting a production version for mid July.</li>
 	<li>you can not decompile and make any modifications to the code</li>
 	<li>you can not redistribute the jar file to as part of a library / tools that you are selling</li>
+	<li>you can not use the jar file on a server, only on a client ( mobile / table app )</li>
+	<li>we are willing to accommodate changes to the license for your business, please contact us</li>
 </ol>
 	<br/>
 
