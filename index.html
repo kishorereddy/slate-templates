@@ -339,12 +339,25 @@ template.core
 			<ol>
 				<li>support internal variables ( from inside file )</li>
 				<li>support external variables ( from your code )</li>
-				<li>are very similar to css so your learning curve is low</li>
-				<li>allow for inheritance to enable reuse of style groups</li>
-				<li>allows for math calculations</li>
+				<li>relative widths</li>
+				<li>math calculations</li>
+				<li>css-like syntax</li>
+				<li>style groups</li>
+				<li>inherit from style groups</li>
 			</ol>
 <div>
 <pre class="sh_css" >
+/* STYLES FILE : theme_default.txt
+In slate, you can create a styles file ( to represent a theme )
+to store all your styles for UI elements.
+Featues are listed in comments below:
+*/
+
+
+/*  1. VARIABLES 
+You can setup variables just like in sass/less,
+but putting the variables inside the 'vars' block.
+*/
 vars
 {	
    screenWidth:           @app.screenWidth;
@@ -359,6 +372,13 @@ vars
    baseTextHeaderWeight:  bold;
 }
 
+/* 2. STYLE GROUPS:
+Setup a style group called 'core'
+In your template link to this style group via syntax:
+
+template.core { .... }
+
+*/
 group:core
 {
    h1 { font-weight: @baseTextHeaderWeight; }
@@ -390,7 +410,12 @@ group:core
    .left   { alignh:'center'; }
    .center { alignh:'center'; }
    .right  { alignh:'right';  }
-	
+
+   
+   /* 3. MATH OPERATIONS
+   Basic math operations are supported for dynamic
+   width and height calculations.  
+   */
    .col1  { width: ( @screenWidth * .08 ); }	
    .col2  { width: ( @screenWidth * .16 ); }
    .col3  { width: ( @screenWidth * .25 ); }
@@ -404,6 +429,12 @@ group:core
    .col11 { width: ( @screenWidth * .91 ); }
    .col12 { width:   @screenWidth      ; }
    	
+    /* 4. VARIABLE USAGE
+    You can use the variables using the '@' symbol.
+    You can either use variables declared in 'vars'
+    or you can use variables supplied from your app
+    by using @app.variablename.
+    */
    .iconXSmall { width: @app.iconXSmall; }
    .iconSmall  { width: @app.iconSmall; }
    .iconMedium { width: @app.iconMedium; }
@@ -417,6 +448,16 @@ group:core
    .marginl5   { margin-left: ( @screenWidth * .05 ); }	
    .marginl6   { margin-left: ( @screenWidth * .06 ); }	
    .marginl7   { margin-left: ( @screenWidth * .07 ); }	
+}
+
+
+/* INHERITANCE
+You can create multiple style groups and have them
+inherit from another style group
+*/
+group:aboutpage inherits=core
+{
+	
 }
 </pre>
 </div>			
@@ -465,17 +506,37 @@ TemplateView tview = svc.executeTemplate("text6 @firstname");
 <h1><a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span>License</a></h1>
 <p>Slate templates library is closed source for the time being, with potential plugins / extensions that may become open-source. You can use the library given the following restrictions and considerations:</p>
 <a href="https://github.com/kishorereddy/slate-templates" class="user-mention">Check full license here</a> <br/><br/>
+
+<h4>Common restrictions</h4>
+<p> You can not do the following regardless of whether you are using slate templates for personal / commercial use.</p>
+<ol>
+	<li>you can not redistribute the jar file for others to use</li>
+	<li>you can not use the jar file on a server, only on mobile device / tablet</li>
+	<li>you can not make any modifications to the code</li>
+	<li><strong>please contact us for any custom changes to the license for your business</strong></li>
+</ol>
+
+<h4>Personal use / Beta version</h4>
+<p>NOTES:
+All the common restrictions listed above apply. 
+This beta version may have issues, we are targeting a production version for mid July.
+</p>
 <ol>
 	<li>acknowledge use of slate templates in your app ( in either an about or help page )</li>
-	<li><strong>free for personal use, your mobile app must be free without in-app purchases.</strong></li>
-	<li>beta version is free for both personal and commercial use ( without any modifications ) </li>
-	<li><strong>license fee is $40 for commercial use for 1 year for production version</strong></li>
-	<li>this beta version may have issues, we are targeting a production version for mid July.</li>
-	<li>you can not decompile and make any modifications to the code</li>
-	<li>you can not redistribute the jar file to as part of a library / tools that you are selling</li>
-	<li>you can not use the jar file on a server, only on a client ( mobile / table app )</li>
+	<li><strong>your android/windows based app must be free without in-app purchases.</strong></li>
+	<li>beta version is free to use for both personal and commercial use. </li>
+	<li>please note the beta version may have bugs and or other issues</li>
+</ol>
+
+<h4>Commerical use</h4>
+<p>NOTE: All the common restrictions listed above apply</p>
+<ol>
+	<li><strong>license fee is $40 for 1 year commercial subscription</strong></li>
+	<li>commercial use applies to paid apps or apps with in-app purchases</li>
+	<li>commercial use applies to enterprise organizations using slate templates</li>
 	<li>we are willing to accommodate changes to the license for your business, please contact us</li>
 </ol>
+
 	<br/>
 
 <h1><a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link">About us</span></a></h1>
@@ -483,7 +544,7 @@ TemplateView tview = svc.executeTemplate("text6 @firstname");
 <div><strong>Kishore Reddy</strong></div>
 <p>Kishore is founder of CodeHelix Solutions Inc., and architect of Slate templates, Slate Calendar and multiple open-source projects</p>
 <div><strong>Mahesh Gottumukkala</strong></div>
-<p>Mahesh is co-founder of CodeHelix Solutions Inc., and is involved in product and project management, research & analysis, and quality-assurance.</p>
+<p>Mahesh is co-founder of CodeHelix Solutions Inc., and is involved in product management and  development activities.</p>
 
 <br/>
 <h1><a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span>Contact</a></h1>
