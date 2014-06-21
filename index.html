@@ -12,7 +12,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Slate-templates - for mobile scripting</title>
+    <title>Slate Templates - for mobile scripting</title>
   </head>
 
   <body>
@@ -20,14 +20,14 @@
       <div class="inner">
 
         <header>
-          <h1>Slate-templates </h1>
+          <h1>Slate templates </h1>
           <h2>Native Android / Windows UI templating </h2>
         </header>
 
         <section id="downloads" class="clearfix">
           <a href="https://github.com/kishorereddy/slate-templates/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
           <a href="https://github.com/kishorereddy/slate-templates" id="view-on-github" class="button"><span>View on GitHub</span></a>
-          <a href="https://github.com/kishorereddy/slate-templates/tarball/master" id="view-on-github" class="button"><span>Contact us</span></a>
+          <a href="#contactus" id="view-on-github" class="button"><span>Contact us</span></a>
         </section>
 
         <hr>
@@ -347,17 +347,15 @@ template.core
 			</ol>
 <div>
 <pre class="sh_css" >
-/* STYLES FILE : theme_default.txt
-In slate, you can create a styles file ( to represent a theme )
-to store all your styles for UI elements.
-Featues are listed in comments below:
-*/
+// STYLES FILE : theme_default.txt
+// In slate, you can create a styles file ( to represent a theme )
+// to store all your styles for UI elements.
+// Featues are listed in comments below:
 
 
-/*  1. VARIABLES 
-You can setup variables just like in sass/less,
-but putting the variables inside the 'vars' block.
-*/
+// 1. VARIABLES 
+// You can setup variables just like in sass/less,
+// but putting the variables inside the 'vars' block.
 vars
 {	
    screenWidth:           @app.screenWidth;
@@ -372,13 +370,12 @@ vars
    baseTextHeaderWeight:  bold;
 }
 
-/* 2. STYLE GROUPS:
-Setup a style group called 'core'
-In your template link to this style group via syntax:
-
-template.core { .... }
-
-*/
+// 2. STYLE GROUPS:
+// Setup a style group called 'core'
+// In your template link to this style group via syntax:
+// 
+// template.core { .... }
+//
 group:core
 {
    h1 { font-weight: @baseTextHeaderWeight; }
@@ -412,10 +409,9 @@ group:core
    .right  { alignh:'right';  }
 
    
-   /* 3. MATH OPERATIONS
-   Basic math operations are supported for dynamic
-   width and height calculations.  
-   */
+   // 3. MATH OPERATIONS
+   // Basic math operations are supported for dynamic
+   // width and height calculations. 
    .col1  { width: ( @screenWidth * .08 ); }	
    .col2  { width: ( @screenWidth * .16 ); }
    .col3  { width: ( @screenWidth * .25 ); }
@@ -429,12 +425,11 @@ group:core
    .col11 { width: ( @screenWidth * .91 ); }
    .col12 { width:   @screenWidth      ; }
    	
-    /* 4. VARIABLE USAGE
-    You can use the variables using the '@' symbol.
-    You can either use variables declared in 'vars'
-    or you can use variables supplied from your app
-    by using @app.variablename.
-    */
+   // 4. VARIABLE USAGE
+   // You can use the variables using the '@' symbol.
+   // You can either use variables declared in 'vars'
+   // or you can use variables supplied from your app
+   // by using @app.variablename.
    .iconXSmall { width: @app.iconXSmall; }
    .iconSmall  { width: @app.iconSmall; }
    .iconMedium { width: @app.iconMedium; }
@@ -492,7 +487,7 @@ TemplateView tview = svc.executeTemplate("text6 @firstname");
 </pre>
 </div>	
 		
-          
+
 <h1><a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span>Predefined Templates</a></h1>
 <p>We will soon provide a few pre-defined, well designed templates ( using slate ) for some common pages. This will provide both good examples on how to use slate as well as having a nice bootstrapped with boiler-plate content ready to go. Predefined templates will be available for the following <strong>pages</strong>:</p>
 <ol>
@@ -537,6 +532,7 @@ TemplateView tview = svc.executeTemplate("text6 @firstname");
 
 	<br/>
 
+<a name="contactus" />
 <h1><a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link">About us</span></a></h1>
 <p>Slate Templates is a product of <a href="http://codehelixsolutions.com" class="anchor">Code Helix Solutions Inc.</a>, a software and mobile development company. We develop open-source software, and are also currently focused on developing tools for the android and windows phone platforms. Slate Calendar is our core mobile application.</p>
 <div><strong>Kishore Reddy</strong></div>
