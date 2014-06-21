@@ -26,8 +26,8 @@
 
         <section id="downloads" class="clearfix">
           <a href="https://github.com/kishorereddy/slate-templates/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/kishorereddy/slate-templates/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
           <a href="https://github.com/kishorereddy/slate-templates" id="view-on-github" class="button"><span>View on GitHub</span></a>
+          <a href="https://github.com/kishorereddy/slate-templates/tarball/master" id="view-on-github" class="button"><span>Contact us</span></a>
         </section>
 
         <hr>
@@ -302,7 +302,7 @@ setup
 {
    // 2. Only include mock data if pre-processor 
    // variable exists.
-   #if test-data
+   ifdef test-data
       set events = 
       [
          { name: 'meeting 1', time: '10:00 am' },
@@ -310,7 +310,7 @@ setup
          { name: 'meeting 3', time: '2:30 pm'  },
          { name: 'meeting 4', time: '3:00 pm'  }
       ];
-   #endif
+   endif
 }
 template.core
 {
@@ -507,8 +507,8 @@ TemplateView tview = svc.executeTemplate("text6 @firstname");
 <p>Slate templates library is closed source for the time being, with potential plugins / extensions that may become open-source. You can use the library given the following restrictions and considerations:</p>
 <a href="https://github.com/kishorereddy/slate-templates" class="user-mention">Check full license here</a> <br/><br/>
 
-<h4>Common restrictions</h4>
-<p> You can not do the following regardless of whether you are using slate templates for personal / commercial use.</p>
+<div class="featured">Common restrictions</div>
+<p> You can NOT do the following regardless of personal / commercial use.</p>
 <ol>
 	<li>you can not redistribute the jar file for others to use</li>
 	<li>you can not use the jar file on a server, only on mobile device / tablet</li>
@@ -516,19 +516,17 @@ TemplateView tview = svc.executeTemplate("text6 @firstname");
 	<li><strong>please contact us for any custom changes to the license for your business</strong></li>
 </ol>
 
-<h4>Personal use / Beta version</h4>
-<p>NOTES:
-All the common restrictions listed above apply. 
-This beta version may have issues, we are targeting a production version for mid July.
-</p>
+<div class="featured">Pesonal use / Beta version</div>
+<p>NOTES: All the common restrictions listed above apply. </p>
 <ol>
 	<li>acknowledge use of slate templates in your app ( in either an about or help page )</li>
 	<li><strong>your android/windows based app must be free without in-app purchases.</strong></li>
 	<li>beta version is free to use for both personal and commercial use. </li>
 	<li>please note the beta version may have bugs and or other issues</li>
+	<li>beta version may have issues, we are targeting a production version for late july</li>
 </ol>
 
-<h4>Commerical use</h4>
+<div class="featured">Commercial Version</div>
 <p>NOTE: All the common restrictions listed above apply</p>
 <ol>
 	<li><strong>license fee is $40 for 1 year commercial subscription</strong></li>
@@ -545,6 +543,8 @@ This beta version may have issues, we are targeting a production version for mid
 <p>Kishore is founder of CodeHelix Solutions Inc., and architect of Slate templates, Slate Calendar and multiple open-source projects</p>
 <div><strong>Mahesh Gottumukkala</strong></div>
 <p>Mahesh is co-founder of CodeHelix Solutions Inc., and is involved in product management and  development activities.</p>
+<div><strong>Part-time members</strong></div>
+<p>We have a small 2-3 person team of consultants working in india. </p>
 
 <br/>
 <h1><a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span>Contact</a></h1>
