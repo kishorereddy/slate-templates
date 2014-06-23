@@ -25,7 +25,12 @@
         </header>
 
         <section id="downloads" class="clearfix">
+<<<<<<< HEAD
+          <a href="/dist/slate_templates.zip" id="download-zip" class="button"><span>samples.zip</span></a>
+          <a href="https://github.com/kishorereddy/slate-templates/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+=======
           <a href="https://github.com/kishorereddy/slate-templates/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+>>>>>>> origin/gh-pages
           <a href="https://github.com/kishorereddy/slate-templates" id="view-on-github" class="button"><span>View on GitHub</span></a>
           <a href="#contactus" id="view-on-github" class="button"><span>Contact us</span></a>
         </section>
@@ -468,20 +473,30 @@ import com.slate.templates.templating.*;
 
 TemplateService svc = new TemplateService();
 
-// 1. Fill the context with all the neccessary info.
-// - android context to create controls
-// - window manager to figure out screen dimensions
-// - resources to load files 
-svc.initialize(aboutActivity);
+// 1. intialize using the activity.
+// This sets the android context, resources, asset manager
+svc = new TemplateService();
+svc.initialize(this);
 
-// 2. Put some data into template
-svc.putData("firstname", "john");
+// 2. setup the references to the resource 
+// strings and images and styles.
+svc.Context.ResourceStyles = R.style.class;
+svc.Context.ResourceStrings = R.string.class;
+svc.Context.ResourceImages  = R.drawable.class;
 
-// 3. Load the theme file ( just like css )
-svc.loadTheme("theme_default.txt");
+// 3. load the theme and set optional variables
+svc.registerDefaultStyles();
+svc.setThemeVariable("textColorAccent", "#2980B9", true);
+svc.loadThemeFile("slate_theme_default.txt");
+
+// 4. OPTIONAL settings
+svc.getSettings().Use24HourClock = false;
+
+// 5. OPTIONAL: setup some sample data to use in template.
+svc.setData("firstName",  "john");
 
 // 4. Now execute template and get view
-TemplateView tview = svc.executeTemplate("text6 @firstname");
+TemplateView tview = svc.executeTemplateFile("slate_sample1.txt");
 
 // NOTE: More options are available, this is a short example
 </pre>
