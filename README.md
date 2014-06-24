@@ -54,5 +54,6 @@ https://github.com/kishorereddy/slate-templates/raw/master/media/template-sample
 
 
 ###[See template wiki page for more info !](https://github.com/kishorereddy/slate-templates/wiki/templates)
+
 ###[See tags wiki page for more info !](https://github.com/kishorereddy/slate-templates/wiki/tags)
 
