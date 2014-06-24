@@ -1,4 +1,4 @@
-SLATE - a templating engine for mobile
+SLATE - native modern templating for mobile
 =====
 slate is a light-weight NATIVE cross-platform( android - windows phone ) templating language for mobile devices.
 
