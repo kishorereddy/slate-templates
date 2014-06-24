@@ -6,6 +6,13 @@ slate is a light-weight NATIVE cross-platform( android - windows phone ) templat
 
 ###[See slatetemplates.com !](http://www.slatetemplates.com)
 
+
+# android + windows phone
+slate templates convert easy to use and concise templates ( almost 50% smaller than xml ) to native android and windows phone controls!
+
+# optimal producitivy
+slate templates have been designed for minimal typing, optimal productivy and for rapid UI prototying and development. see [www.slatetemplates.com !](http://www.slatetemplates.com) for more detail info as well as the [wiki](https://github.com/kishorereddy/slate-templates/wiki) page here.
+
 # goals
 A fully **NATIVE** mobile templating engine for android and windows phone
 Following are top level goals
