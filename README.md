@@ -60,4 +60,4 @@ template.core
 slate templates convert easy to use and concise templates ( almost 50% smaller than xml ) to native android and windows phone controls!
 
 # optimal productivity
-slate templates have been designed for minimal typing, optimal productivy and for rapid UI prototying and development. see [www.slatetemplates.com !](http://www.slatetemplates.com) for more detail info as well as the  [wiki](https://github.com/kishorereddy/slate-templates/wiki) page here.
+slate templates have been designed for minimal typing, optimal productivy and for rapid UI prototying and development. see [www.slatetemplates.com](http://www.slatetemplates.com) for more detail info as well as the  [wiki](https://github.com/kishorereddy/slate-templates/wiki) page here.
