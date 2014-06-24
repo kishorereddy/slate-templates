@@ -48,12 +48,8 @@ template.core
 
 ### output 
 ![output here](/media/template-sampleui_1.jpg?raw=true)
-https://github.com/kishorereddy/slate-templates/raw/master/media/template-sampleui_1.jpg
 
 
 
 
-###[See template wiki page for more info !](https://github.com/kishorereddy/slate-templates/wiki/templates)
-
-###[See tags wiki page for more info !](https://github.com/kishorereddy/slate-templates/wiki/tags)
-
+###[See wiki page for more info !](https://github.com/kishorereddy/slate-templates/wiki)
