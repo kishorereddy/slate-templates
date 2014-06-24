@@ -31,11 +31,11 @@ template.core
 			
    @each ( day in @calendar.days limit=4 )
    {
-	list.day
+	list.col2
 	{
 		h6.dayName  @day.dayName			  
 		text6.cell	@day.dayDate
-		img.iconwt	@day.weatherImage
+		img.iconSmall	@day.weatherImage
 		text6.cell	@day.tempHigh
 		text6.cell	@day.tempLow
 		text6.cell	@day.firstEventTimeAsText
@@ -56,41 +56,3 @@ https://github.com/kishorereddy/slate-templates/raw/master/media/template-sample
 ###[See template wiki page for more info !](https://github.com/kishorereddy/slate-templates/wiki/templates)
 ###[See tags wiki page for more info !](https://github.com/kishorereddy/slate-templates/wiki/tags)
 
-
-# styles
-Styles in slates are setup very similar to CSS but with some dynamic functionality and also some limitations ( to maximize performance ).
-
-```css
-vars
-{
-	baseColor: Black;
-	hWeight: bold;
-	app-themecolor: @app.themecolor;
-	boardwidth: ( @app.screenwidth - 20 );
-}
-group:core
-{
-	h1 { font-size: 36; font-weight: @hWeight; color: @baseColor; }
-	h2 { font-size: 32; font-weight: @hWeight; color: @baseColor; }
-	h3 { font-size: 28; font-weight: @hWeight; color: @baseColor; }
-	h4 { font-size: 24; font-weight: @hWeight; color: @baseColor; }
-	h5 { font-size: 20; font-weight: @hWeight; color: @baseColor; }
-	h6 { font-size: 16; font-weight: @hWeight; color: @baseColor; }
-	text1 { font-size: 36; color: @baseColor;   }
-	text2 { font-size: 32; color: @baseColor;   }
-	text3 { font-size: 28; color: @baseColor;   }
-	text4 { font-size: 24; color: @baseColor;   }
-	text5 { font-size: 20; color: @baseColor;   }
-	text6 { font-size: 16; color: @baseColor;   }
-
-	.area-header { margin:'10,5,10,5'; }
-	.icon { width:30dp; margin:'0,0,10,0'; sourceprefix:'/Assets/dark/'; }
-	.accent { color: '@app.themecolor'; }
-	.bold1 { font-weight:bold; }
-	.bold2 { font-weight:semi-bold; }
-	.board { width:450px; alignh:center; background-color:'@app.themecolor';}	
-	.weather-icon { width:30; }	
-	.weather-icon-big { width:100dp; }
-	list.col3	  { width:110dp; mode:across; }	
-}
-```
