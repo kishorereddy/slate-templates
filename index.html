@@ -160,7 +160,7 @@ template.core
 					<tr><td><img src="images/feature_relwidth2.png"  />            </td><td><div class="featured">% widths for different screen sizes </div><p>relative widths to support various screen sizes</p></td></tr>
 					<tr><td><img src="images/feature_secure.png"  />              </td><td><div class="featured">secure templating          </div><p>mostly logic-less, no access to device, only data</p></td></tr>
 					<tr><td><img class="iconSmall" src="images/database2.png" /></td><td><div class="featured">optionally use mock data for protyping           </div><p>easily use real or fake data for testing</p></td></tr>			
-					<tr><td><img class="iconSmall" src="images/feature_css.png" /></td><td><div class="featured">css / less like syntax for styling </div><p>low learning curve due</p></td></tr>
+					<tr><td><img class="iconSmall" src="images/feature_css.png" /></td><td><div class="featured">css like syntax for styling </div><p> supports variables like 'sass / 'less' stylesheet language, low learning curve</p></td></tr>
 					
 				</table>
 			
@@ -273,7 +273,7 @@ View viewFromText = loadTemplate(templateContent);
 </pre>
 </div>			
 			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">4. relative widths ( using percent % )</span></a></h2>
-			<p>One of the core problems with mobile UI development is handling different resolutions. Slate solves a big part of this problem by supporting relative or percentage based widths. Typically, you have to set up the width of an android control to be MATCH_PARENT, WRAP_CONTENT or a phyical number dp (device independent pixels). The problem is that even the dp's vary from device to device. By supporting % widths ( in addition to WRAP_CONTENT  ), slates solves a number of resolution issues, while keeping the code base very small. Later on we will see how relative margins and padding are also supported.</p>
+			<p>One of the core problems with mobile UI development is handling different resolutions. Slate solves a big part of this problem by supporting relative or percentage based widths. Typically, you have to set up the width of an android control to be MATCH_PARENT, WRAP_CONTENT or a physical number dp (device independent pixels). The problem is that even the dp's vary from device to device. By supporting % widths ( in addition to WRAP_CONTENT  ), slates solves a number of resolution issues, while keeping the code base very small. Later on we will see how relative margins and padding are also supported.</p>
 <div>
 <pre class="sh_javascript" >
 template.core
@@ -332,7 +332,7 @@ template.core
 	
 			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">6. secure</span></a></h2>
 			<p>Slate templates are secure in that they can only access data ( lists, objects, maps ) that you supply to the system. There is currently no way for the templates to access any system / device level features.
-			Also, the templating system has been designed to be mostly logic-less, similar to handlebars or moustache. For example, there are no if conditions but you can optionally load/disable controls from being shown.</p>
+			Also, the templating system has been designed to be mostly logic-less, similar to handlebars or mustache js. For example, there are no if conditions but you can optionally load/disable controls from being shown.</p>
 
 			<h2><a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link">7. css like styling</span></a></h2>
 			<p>You can not have a dynamic UI creation process without support customization and styling of the content. This is where the Slate Css like style sheets come in. Slate allows you to tag your UI elements ( like text, heading, list, etc ) with styles that are placed in a separate "stylesheet" ( very similar to css ). The added benefit here is that the stylesheets :</p>
