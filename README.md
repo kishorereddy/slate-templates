@@ -9,7 +9,7 @@ slate is a light-weight NATIVE cross-platform( android - windows phone ) templat
 
 
 # example
-Here is a sample template in slate that generate a fully NATIVE UI for android and windows phone. Slate support tags that are similar to html. The templates are easy to learn and use, almost 40% to 60% smaller than native android xml layouts, offer data binding and many other features. See the wiki page and [www.slatetemplates.com](http://www.slatetemplates.com) for more information.
+Here is a sample template in slate that generates a fully NATIVE UI for android and windows phone. Slate support tags that are similar to html. The templates are very easy to learn and use, almost 40% to 60% smaller than native android xml layouts, offer data binding and many other features. See the wiki page and [www.slatetemplates.com](http://www.slatetemplates.com) for more information.
 
 ![output here](/media/sample_template_and_output.PNG?raw=true)
 
