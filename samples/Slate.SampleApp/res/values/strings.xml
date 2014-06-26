@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Slate Sample App</string>
+    <string name="app_desc">sample app to display slate templating features.</string>
+    <string name="app_version">1.0.0.1</string>
+    <string name="app_url_short">slate calendar ( using slate templates )</string>
+    <string name="app_url">https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar</string>
+    <string name="company_name">CodeHelix Solutions Inc</string>
+    <string name="company_site">http://codehelixsolutions.com</string>
+    <string name="company_site_app">http://codehelixsolutions.com/slatecalendar</string>
+    <string name="company_site_contact">http://codehelixsolutions.com/contact</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="word_version">version</string>
+    <string name="word_about_us">about us</string>
+    <string name="word_company">company</string>
+    <string name="word_visit">visit</string>
+    
+</resources>

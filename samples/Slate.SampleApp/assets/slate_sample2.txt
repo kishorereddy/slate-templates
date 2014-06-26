@@ -1,0 +1,80 @@
+template.core
+{
+	list.margint2.marginl2 down
+	{
+	    h4.accent 'typography'
+		p 'just like html, headings h1 to h6, p, and text1 to text6 are supported. margins are removed to showcase column based sizes below' 
+		list across
+		{		   
+			list down width='50%' alignv=top
+			{
+				h1 'heading 1'
+				h2 'heading 2'
+				h3 'heading 3'
+				h4 'heading 4'
+				h5 'heading 5'
+				h6 'heading 6'
+			}	
+			
+			list down width='45%' alignv=top
+			{	
+				text1 'text 1'
+				text2 'text 2'
+				text3 'text 3'
+				text4 'text 4'
+				text5 'text 5'
+				text6 'text 6'
+			}
+		}
+		
+		h4.accent.margint2 'paragraphs'
+		p  'This is a sample paragraph using the p tag in slate templates. p is same as text6 but with margins.'
+				
+		
+		h4.accent.margint2 'column based sizes'
+		p  'columns col1 to col12 are supported ( similar to bootstrap ) to represent percentages of the screen size. This means you can apply a width to text, headings and lists.'
+		list.margint2 down
+		{
+		    p 'lists can have column sizes col1 to col12'
+			list.col1  background-color='Red'    margin-bottom='10' height='50' { }
+			list.col2.accentbg  margin-bottom='10' height='50' { }
+			list.col3  background-color='Red'       margin-bottom='10' height='50' { }
+			list.col4.accentbg  margin-bottom='10' height='50' { }
+			list.col5  background-color='Red'       margin-bottom='10' height='50' { }	
+			list.col6.accentbg  margin-bottom='10' height='50' { }	
+			list.col7  background-color='Red'       margin-bottom='10' height='50' { }	
+			list.col8.accentbg  margin-bottom='10' height='50' { }	
+			list.col9  background-color='Red'       margin-bottom='10' height='50' { }	
+			list.col10.accentbg margin-bottom='10' height='50' { }			
+			list.col11 background-color='Red'       margin-bottom='10' height='50' { }
+			list.col12.accentbg margin-bottom='10' height='50' { }
+		}
+		
+		h4.accent.margint2 'icons'
+		p  'Default icon sizes are iconSmall, iconMid, iconLarge, iconXLarge. you can create your own.'
+		
+		list.margint2 down
+		{
+			list across
+			{
+				text6.col3.strong 'iconSmall'
+				img.iconSmall  @ic_launcher				
+			}
+			list across
+			{
+				text6.col3.strong 'iconMid'
+				img.iconMid  @ic_phone				
+			}
+			list across
+			{
+				text6.col3.strong 'iconLarge'
+				img.iconLarge  @ic_social_chat				
+			}
+			list across
+			{
+				text6.col3.strong 'iconXLarge'
+				img.iconXLarge  @ic_social_share				
+			}
+		}
+	}
+}

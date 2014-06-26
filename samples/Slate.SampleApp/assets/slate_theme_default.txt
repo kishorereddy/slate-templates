@@ -1,0 +1,111 @@
+vars
+{	
+	screenWidth:		   @app.screenWidth;
+	screenHeight:          @app.screenHeight;
+	pageWidth:             @app.pageWidth;
+	themeColor:	   	       @app.themeColor;
+	baseTextColor:         @app.textColor;
+	baseTextColorAccent:   @app.textColorAccent;
+	baseTextColorLight:    @app.textColorLight;	
+	baseTextColorContrast: @app.textColorContrast;
+	baseTextHeaderWeight:  bold;
+}
+
+group:core
+{
+	h1 {  font-weight: @baseTextHeaderWeight; color: @baseTextColor; }
+	h2 {  font-weight: @baseTextHeaderWeight; color: @baseTextColor; }
+	h3 {  font-weight: @baseTextHeaderWeight; color: @baseTextColor; }
+	h4 {  font-weight: @baseTextHeaderWeight; color: @baseTextColor; }
+	h5 {  font-weight: @baseTextHeaderWeight; color: @baseTextColor; }
+	h6 {  font-weight: @baseTextHeaderWeight; color: @baseTextColor; }
+	h7 {  font-weight: @baseTextHeaderWeight; color: @baseTextColor; }
+	h8 {  font-weight: @baseTextHeaderWeight; color: @baseTextColor; }
+	
+	text1 {  color: @baseTextColor;  }
+	text2 {  color: @baseTextColor;  }
+	text3 {  color: @baseTextColor;  }
+	text4 {  color: @baseTextColor;  }
+	text5 {  color: @baseTextColor;  }
+	text6 {  color: @baseTextColor;  }
+	text7 {  color: @baseTextColor;  }
+	text8 {  color: @baseTextColor;  }
+	p     {  color: @baseTextColor;  margin-top: ( @screenWidth * .01 ); margin-bottom: ( @screenWidth * .02 );}
+	
+	.light        {  color: @baseTextColorLight;    }
+	.strong       {  font-weight:bold; }
+	.accentlight  {  color: @baseTextColorAccent; }
+	.accent       {  color: @baseTextColorAccent; }
+	.accentbg     {  background-color: @baseTextColorAccent; }
+	.accentdark   {  color: @baseTextColorAccent; }
+	.label        {  color: Gray; }
+	.contrast     {  color: @baseTextColorContrast; }
+	.backgroundaccent { background-color: @baseTextColorContrast; }
+	.white { color:'White'; }
+	
+	.separator { background-color:'#cccccc'; }
+	
+	
+	.left   { alignh:'center'; }
+	.center { alignh:'center'; }
+	.right  { alignh:'right';  }
+	
+	.col1  {  width: ( @pageWidth * .08 ); }	
+	.col2  {  width: ( @pageWidth * .16 ); }
+	.col3  {  width: ( @pageWidth * .25 ); }
+	.col4  {  width: ( @pageWidth * .33 ); }
+	.col5  {  width: ( @pageWidth * .42 ); }
+	.col6  {  width: ( @pageWidth * .50 ); }
+	.col7  {  width: ( @pageWidth * .58 ); }
+	.col8  {  width: ( @pageWidth * .66 ); }
+	.col9  {  width: ( @pageWidth * .75 ); }	
+	.col10 {  width: ( @pageWidth * .83 ); }
+	.col11 {  width: ( @pageWidth * .91 ); }
+	.col12 {  width:   @pageWidth      ; }
+		
+	.iconXSmall { width: @app.iconXSmall; }
+	.iconSmall  { width: @app.iconSmall; }
+	.iconMedium { width: @app.iconMedium; }
+	.iconLarge  { width: @app.iconLarge; }
+	.iconLarge  { width: @app.iconXLarge; }
+	
+	.marginl1   { margin-left: ( @screenWidth * .01 ); }
+	.marginl2   { margin-left: ( @screenWidth * .02 ); }
+	.marginl3   { margin-left: ( @screenWidth * .03 ); }
+	.marginl4   { margin-left: ( @screenWidth * .04 ); }	
+	.marginl5   { margin-left: ( @screenWidth * .05 ); }	
+	.marginl6   { margin-left: ( @screenWidth * .06 ); }	
+	.marginl7   { margin-left: ( @screenWidth * .07 ); }	
+	.marginl8   { margin-left: ( @screenWidth * .08 ); }		
+	.margint1   { margin-top: ( @screenWidth * .01 ); }
+	.margint2   { margin-top: ( @screenWidth * .02 ); }
+	.margint3   { margin-top: ( @screenWidth * .03 ); }
+	.margint4   { margin-top: ( @screenWidth * .04 ); }	
+	.margint5   { margin-top: ( @screenWidth * .05 ); }	
+	.margint6   { margin-top: ( @screenWidth * .06 ); }	
+	.margint7   { margin-top: ( @screenWidth * .07 ); }	
+	.margint8   { margin-top: ( @screenWidth * .08 ); }		
+	.marginr1   { margin-right: ( @screenWidth * .01 ); }
+	.marginr2   { margin-right: ( @screenWidth * .02 ); }
+	.marginr3   { margin-right: ( @screenWidth * .03 ); }
+	.marginr4   { margin-right: ( @screenWidth * .04 ); }	
+	.marginr5   { margin-right: ( @screenWidth * .05 ); }	
+	.marginr6   { margin-right: ( @screenWidth * .06 ); }	
+	.marginr7   { margin-right: ( @screenWidth * .07 ); }	
+	.marginr8   { margin-right: ( @screenWidth * .08 ); }		
+	.marginb1   { margin-bottom: ( @screenWidth * .01 ); }
+	.marginb1b  { margin-bottom: ( @screenWidth * .015 ); }
+	.marginb2   { margin-bottom: ( @screenWidth * .02 ); }
+	.marginb3   { margin-bottom: ( @screenWidth * .03 ); }
+	.marginb4   { margin-bottom: ( @screenWidth * .04 ); }	
+	.marginb5   { margin-bottom: ( @screenWidth * .05 ); }	
+	.marginb6   { margin-bottom: ( @screenWidth * .06 ); }	
+	.marginb7   { margin-bottom: ( @screenWidth * .07 ); }	
+	.marginb8   { margin-bottom: ( @screenWidth * .08 ); }	
+}
+
+
+group:todaysummary inherits=core
+{
+	
+}

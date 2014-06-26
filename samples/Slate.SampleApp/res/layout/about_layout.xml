@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AboutActivity" >
+
+    <ScrollView 
+    		android:id="@+id/pageMainScrollarea"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+	 	<LinearLayout
+		        android:id="@+id/pageAboutContainer"
+	        	android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        style="@style/H4"
+			        android:fontFamily="sans-serif-light"
+			        android:textStyle="bold"			        	        
+			        android:text="@string/app_name" />
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        style="@style/Text6"
+			        android:fontFamily="sans-serif-light"
+			        android:text="@string/app_desc" />
+			    
+				<TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        style="@style/H4"
+			        android:fontFamily="sans-serif-light"
+			        android:textStyle="bold"	
+			        android:layout_marginTop="20dp"		        	        
+			        android:text="@string/word_version" />
+			    <TextView
+			        android:id="@+id/txtAboutVersion"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        style="@style/Text6.Contrast"
+			        android:fontFamily="sans-serif-light"
+			        android:textStyle="normal"			  
+			        android:text="@string/app_version" />
+			    
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        style="@style/H4"
+			        android:fontFamily="sans-serif-light"
+			        android:textStyle="bold"	
+			        android:layout_marginTop="20dp"		       
+			        android:text="@string/word_about_us" />
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        style="@style/Text6.Contrast"
+			        android:fontFamily="sans-serif-light"
+			        android:textStyle="normal"			  
+			        android:text="@string/company_name" />
+			    <TextView
+			        android:id="@+id/txtAboutCompanySite"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        style="@style/Text.Url"
+			        android:text="@string/company_site" />
+		</LinearLayout>
+	 </ScrollView>
+
+</RelativeLayout>

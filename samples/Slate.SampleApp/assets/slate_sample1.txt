@@ -1,0 +1,29 @@
+template.core
+{
+	list down
+	{
+		text3 @r.strings.app_name
+		p     @r.strings.app_desc
+		
+		text3.margint2 @r.strings.word_version
+		p     @r.strings.app_version
+		
+		text3.margint2 @r.strings.word_about_us
+		p     @r.strings.company_name
+		text6.accent @r.strings.company_site
+		
+		list.margint4 across
+		{
+			list.center across width='32%' { img:icPhone.iconSmall @ic_phone        tag='action_phone' }
+			list.center across width='32%' { img:icChat.iconSmall  @ic_social_chat  tag='action_chat'  }
+			list.center across width='32%' { img:icShare.iconSmall @ic_social_share tag='action_share' }
+		}
+		
+		list.margint2.marginb2 down
+		{
+			text6:message.accent ''
+		}
+		text6 @sampleData
+		
+	}
+}
