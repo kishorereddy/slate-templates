@@ -27,10 +27,12 @@ Following are top level goals
 ![output here](/media/sample_template_and_output.PNG?raw=true)
 
 
-### slate calendar app in google play using slate templates
+### [slate calendar app in google play using slate templates](https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar)
+
 ![output here](/media/slate_calendar_slate_usage.png?raw=true)
 
 
+### more samples
 ```javascript
 template.core
 {
@@ -56,7 +58,6 @@ template.core
 
 ### output 
 ![output here](/media/template-sampleui_1.jpg?raw=true)
-
 
 
 
