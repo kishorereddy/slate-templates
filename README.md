@@ -23,7 +23,14 @@ Following are top level goals
 
 
 # templates
-### sample 
+### sample code and generated native mobile UI 
+![output here](/media/sample_template_and_output.PNG?raw=true)
+
+
+### slate calendar app in google play using slate templates
+![output here](/media/slate_calendar_slate_usage.png?raw=true)
+
+
 ```javascript
 template.core
 {
