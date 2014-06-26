@@ -2,11 +2,7 @@ SLATE - a native modern templating engine for mobile devices
 =====
 slate is a light-weight NATIVE cross-platform( android - windows phone ) templating engine for mobile devices.
 
-###[See wiki for more details!](https://github.com/kishorereddy/slate-templates/wiki)
 
-###[See slatetemplates.com !](http://www.slatetemplates.com)
-
-# platform support
 Slate templates are available currrently for android and windows phone. They allow cross-platform UI development allowing you to create native UIs for both android and windows phone. 
 
 | platform | notes |
