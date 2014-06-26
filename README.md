@@ -7,6 +7,8 @@ slate is a light-weight NATIVE cross-platform( android - windows phone ) templat
 ###[See slatetemplates.com !](http://www.slatetemplates.com)
 
 # platform support
+Slate templates are available currrently for android and windows phone. They allow cross-platform UI development allowing you to create native UIs for both android and windows phone. 
+
 | platform | notes |
 |:-- |:-- |
 | ![output here](/media/android.png?raw=true) | currently available for android, see sample app |
@@ -14,6 +16,8 @@ slate is a light-weight NATIVE cross-platform( android - windows phone ) templat
 
 
 # sample
+Here is a sample template in slate that generate a fully NATIVE UI for android and windows phone. Slate support tags that are similar to html. The templates are easy to learn and use, almost 40% to 60% smaller than native android xml layouts, offer data binding and many other features. See the wiki page and [www.slatetemplates.com](http://www.slatetemplates.com) for more information.
+
 ![output here](/media/sample_template_and_output.PNG?raw=true)
 
 
@@ -25,8 +29,7 @@ Slate templates are used in a production android calendar app on google play. Th
 
 
 # goals
-A fully **NATIVE** mobile templating engine for android and windows phone
-Following are top level goals
+Here are some of the top uses for slate templates for both personal projects as well as commercial. Please note this is the first initial release of slate templates ( in beta ) and we will soon provide a beta 2 version.
 
 | #  | goal | approach |
 |:-- |:-- |:-- |
