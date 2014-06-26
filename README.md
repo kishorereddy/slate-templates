@@ -6,6 +6,23 @@ slate is a light-weight NATIVE cross-platform( android - windows phone ) templat
 
 ###[See slatetemplates.com !](http://www.slatetemplates.com)
 
+# platform support
+| platform | notes |
+|:-- |:-- |
+| ![output here](/media/android.png?raw=true) | currently available for android, see sample app |
+| ![output here](/media/windows.png?raw=true) | currently developed for windows, sample app not yet available |
+
+
+# sample
+![output here](/media/sample_template_and_output.PNG?raw=true)
+
+
+# application use
+Slate templates are used in a production android calendar app on google play. The templates are used to generate cards or what we call "boards" on the home page. [Check out Slate Calendar for live examples.](https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar)
+
+![output here](/media/slate_calendar_slate_usage.png?raw=true)
+
+
 
 # goals
 A fully **NATIVE** mobile templating engine for android and windows phone
@@ -20,16 +37,6 @@ Following are top level goals
 |5. |**familiarity** | similar syntax to html and css |
 |6. |**flexible styling** | tag elements with styles like in CSS |
 |7. |**data-binding** | supply data to your templates ( mostly logic-less ) |
-
-
-# sample
-![output here](/media/sample_template_and_output.PNG?raw=true)
-
-
-# application use
-Slate templates are used in a production android calendar app on google play. The templates are used to generate cards or what we call "boards" on the home page. [Check out Slate Calendar for live examples.](https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar)
-
-![output here](/media/slate_calendar_slate_usage.png?raw=true)
 
 
 # another sample
