@@ -60,6 +60,6 @@ Here are some of the top uses for slate templates for both personal projects as 
 
 
 
-###[See wiki page for more info !](https://github.com/kishorereddy/slate-templates/wiki)
+### See [wiki page for more info !](https://github.com/kishorereddy/slate-templates/wiki)
 
-###[See slatetemplates.com ](http://www.slatetemplates.com) for more info.
+### Visit [www.slatetemplates.com ](http://www.slatetemplates.com)
