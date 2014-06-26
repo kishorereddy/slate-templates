@@ -22,17 +22,17 @@ Following are top level goals
 |7. |**data-binding** | supply data to your templates ( mostly logic-less ) |
 
 
-# templates
-### sample code and generated native mobile UI 
+# sample
 ![output here](/media/sample_template_and_output.PNG?raw=true)
 
 
-### [slate calendar app in google play using slate templates](https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar)
+# application use
+Slate templates are used in a production android calendar app on google play. The templates are used to generate cards or what we call "boards" on the home page. [Check out Slate Calendar for live examples.](https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar)
 
 ![output here](/media/slate_calendar_slate_usage.png?raw=true)
 
 
-### more samples
+# another sample
 ```javascript
 template.core
 {
