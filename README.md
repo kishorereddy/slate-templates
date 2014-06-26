@@ -20,22 +20,7 @@ Slate templates are used in a live android calendar app on google play. The temp
 ![output here](/media/slate_calendar_slate_usage.png?raw=true)
 
 
-
-# goals
-Here are some of the top uses for slate templates for both personal projects as well as commercial. Please note this is the first initial release of slate templates ( in beta ) and we will soon provide a beta 2 version.
-
-| #  | goal | approach |
-|:-- |:-- |:-- |
-|1. |**NATIVE** | fully native templating engine converts text to native mobile controls |
-|2. |**multi-platform** | templating engine converts text to native adnroid / windows phone controls |
-|3. |**minimal typing** | size is **40 %** to ** 60% ** less than xml !!! |
-|4. |**simplicity** | ease to use elements and attributes |
-|5. |**familiarity** | similar syntax to html and css |
-|6. |**flexible styling** | tag elements with styles like in CSS |
-|7. |**data-binding** | supply data to your templates ( mostly logic-less ) |
-
-
-# another sample
+# sample code for above week forecast
 ```javascript
 template.core
 {
@@ -59,8 +44,19 @@ template.core
 }
 ```
 
-### output 
-![output here](/media/template-sampleui_1.jpg?raw=true)
+
+# goals
+Here are some of the top uses for slate templates for both personal projects as well as commercial. Please note this is the first initial release of slate templates ( in beta ) and we will soon provide a beta 2 version.
+
+| #  | goal | approach |
+|:-- |:-- |:-- |
+|1. |**NATIVE** | fully native templating engine converts text to native mobile controls |
+|2. |**multi-platform** | templating engine converts text to native adnroid / windows phone controls |
+|3. |**minimal typing** | size is **40 %** to ** 60% ** less than xml !!! |
+|4. |**simplicity** | ease to use elements and attributes |
+|5. |**familiarity** | similar syntax to html and css |
+|6. |**flexible styling** | tag elements with styles like in CSS |
+|7. |**data-binding** | supply data to your templates ( mostly logic-less ) |
 
 
 
