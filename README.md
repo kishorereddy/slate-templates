@@ -8,14 +8,14 @@ slate is a light-weight NATIVE cross-platform( android - windows phone ) templat
 | ![output here](/media/windows.png?raw=true) | currently developed for windows, sample app not yet available |
 
 
-# sample
+# example
 Here is a sample template in slate that generate a fully NATIVE UI for android and windows phone. Slate support tags that are similar to html. The templates are easy to learn and use, almost 40% to 60% smaller than native android xml layouts, offer data binding and many other features. See the wiki page and [www.slatetemplates.com](http://www.slatetemplates.com) for more information.
 
 ![output here](/media/sample_template_and_output.PNG?raw=true)
 
 
-# application use
-Slate templates are used in a production android calendar app on google play. The templates are used to generate cards or what we call "boards" on the home page. [Check out Slate Calendar for live examples.](https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar)
+# live use
+Slate templates are used in a live android calendar app on google play. The templates are used to generate cards or what we call "boards" on the home page. [Check out Slate Calendar for live examples.](https://play.google.com/store/apps/details?id=com.codehelixsolutions.slatecalendar)
 
 ![output here](/media/slate_calendar_slate_usage.png?raw=true)
 
