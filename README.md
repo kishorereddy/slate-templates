@@ -62,9 +62,4 @@ Here are some of the top uses for slate templates for both personal projects as 
 
 ###[See wiki page for more info !](https://github.com/kishorereddy/slate-templates/wiki)
 
-
-# android + windows phone
-slate templates convert easy to use and concise templates ( almost 50% smaller than xml ) to native android and windows phone controls!
-
-# optimal productivity
-slate templates have been designed for minimal typing, optimal productivy and for rapid UI prototying and development. see [www.slatetemplates.com](http://www.slatetemplates.com) for more detail info as well as the  [wiki](https://github.com/kishorereddy/slate-templates/wiki) page here.
+###[See slatetemplates.com ](http://www.slatetemplates.com) for more info.
