@@ -79,11 +79,11 @@ template.core
 {
    list down
    {
-      h4 @companyName
-      p  'A mobile development company'
+      h4 'Slate Templates'
+      p  'build android UIs with this syntax'
       
-      text6.accent 'Slate Calendar'	  
-      text6 @appAbout
+      text6.accent 'Features' 
+      text6 @r.strings.feature_list
    }
 }
 </pre>
@@ -460,7 +460,14 @@ group:aboutpage inherits=core
         <section id="main_content">
 		
 			<h1><a name="welcome-to-github-pages" class="anchor" ><span class="octicon octicon-link">Android example</span></a></h1>
-			<p>Lets look at some sample code in android to run a template</p>
+			<p>Lets look at some sample code in java / android to load a tempalte. It basically involves the following:</p>
+			<ol>
+				<li>Initialize the TemplateService</li>
+				<li>Provide your resource classes ( for strings, ids, icons )</li>
+				<li>Supply default theme ( or a custom one ) and optionally supply variables</li>
+				<li>Supply template to process ( file in assets folder, or explicit text )</li>
+			</ol>
+			<p>Note that the steps 1 to 3 only need to be done 1 time</p>
 <div>
 <pre class="sh_javascript" >
 import com.slate.templates.templating.*;
@@ -471,7 +478,7 @@ TemplateService svc = new TemplateService();
 // 1. intialize using the activity.
 // This sets the android context, resources, asset manager
 svc = new TemplateService();
-svc.initialize(this);
+svc.initialize((Activity)this);
 
 // 2. setup the references to the resource 
 // strings and images and styles.
@@ -506,10 +513,14 @@ TemplateView tview = svc.executeTemplateFile("slate_sample1.txt");
 	<li>help </li>
 	<li>upcoming features</li>
 </ol>
+
+<h1><a name="designer-templates" class="anchor" ><span class="octicon octicon-link"></span>Open-Source ( partial )</a></h1>
+<p>Slate templating engine is currently closed source for the time being, but we will very soon open-source parts of the templating engine to support extensibility.
+For example, some of the features currently in the engine, such as mock data and pre-processor definitions, are implemented as plugins. We will open up areas for other developers to extend parts of the system.</p>
 <br/>
 
 <h1><a name="designer-templates" class="anchor" ><span class="octicon octicon-link"></span>License</a></h1>
-<p>Slate templates library is closed source for the time being, with potential plugins / extensions that may become open-source. You can use the library given the following restrictions and considerations:</p>
+<p>Slate templates can be used under the following restrictions and considerations. Please contact us for custom needs and requirements.</p>
 <a href="https://github.com/kishorereddy/slate-templates" target="_blank" class="user-mention">Check full license here</a> <br/><br/>
 
 <div class="featured">Common restrictions</div>
@@ -517,7 +528,7 @@ TemplateView tview = svc.executeTemplateFile("slate_sample1.txt");
 <ol>
 	<li>you can not redistribute the jar file for others to use</li>
 	<li>you can not use the jar file on a server, only on mobile device / tablet</li>
-	<li>you can not make any modifications to the code</li>
+	<li>you can not make any modifications to the code ( see open-source section above )</li>
 	<li><strong>please contact us for any custom changes to the license for your business</strong></li>
 </ol>
 
