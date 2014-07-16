@@ -26,7 +26,7 @@
 
         <section id="downloads" class="clearfix">
           <a href="https://github.com/kishorereddy/slate-templates/zipball/master/dist" id="download-zip" class="button"><span>slate_beta.zip</span></a>
-          <a href="https://github.com/kishorereddy/slate-templates/wiki" target="_blank" id="view-on-github" class="button"><span>docs</span></a>
+          <a href="https://github.com/kishorereddy/slate-templates/wiki" target="_blank" id="view-on-github" class="button"><span>github</span></a>
 		  <a href="#contactus" id="view-on-github" class="button"><span>contact us</span></a>		  
         </section>
 
@@ -156,7 +156,7 @@ template.core
 			<p>The templating features of slate have been designed for optimal productivity. Here are most of the major features:</p>
 			<table class="tablelist" border="0" cellspacing="0" cellpadding="0">
 					
-					<tr><td><img src="images/feature_less2.png"  />  		      </td><td><div class="featured">40 % to 60% smaller than xml        </div><p>intuitive, and very concise syntax</p></td></tr>
+					<tr><td><img src="images/feature_less2.png"  />  		      </td><td><div class="featured">40 % to 60% smaller than xml        </div><p>intuitive, concise syntax, with sensible defaults</p></td></tr>
 					<tr><td><img src="images/feature_relwidth2.png"  />            </td><td><div class="featured">% widths for different screen sizes </div><p>relative widths to support various screen sizes</p></td></tr>
 					<tr><td><img src="images/feature_secure.png"  />              </td><td><div class="featured">secure templating          </div><p>mostly logic-less, no access to device, only data</p></td></tr>
 					<tr><td><img class="iconSmall" src="images/database2.png" /></td><td><div class="featured">optionally use mock data for protyping           </div><p>easily use real or fake data for testing</p></td></tr>			
@@ -183,6 +183,16 @@ template.core
 					</td>
 				</tr>
 			</table>
+			<br/><br/>
+			<h1><a name="welcome-to-github-pages" class="anchor" ><span class="octicon octicon-link">How does it work ?</span></a></h1>
+			<p>Slate templates work in almost the same way as regular android xml and windows phone xaml UI layouts. Instead of setting up your UI in xml or xaml, you set up your UI in the slate template syntax. The templating system workflow is as follows: </p>
+			<ol>
+				<li>In your activiy, "inflate" a template just like you "inflate" a layout in android</li>
+				<li>Templating system parses the template ( just like xml layout is parsed )</li>
+				<li>A CSS like style / theme file (analogous to android styles.xml ) is loaded</li>
+				<li>Nodes in template are traversed and UI views ( text, images, etc ) are built</li>
+				<li>Styling, data-binding, variable replacement on the view ( text, image, etc ) is done</li>
+			</ol>
 			<br/><br/>
 			<h1><a name="welcome-to-github-pages" class="anchor" ><span class="octicon octicon-link">More details</span></a></h1>
 			<p>Lets dive into some details..</p>
